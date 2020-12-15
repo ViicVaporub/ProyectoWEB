@@ -30,10 +30,10 @@
                     </div>
                   </li>
                   <li class="nav-item" style="margin-left: 10px;">
-                    <a class="nav-link" href="contactanos.php">Meenuu2</a>
+                    <a class="nav-link" href="contactanos.php">CONTACTANOS</a>
                   </li>
                   <li class="nav-item" style="margin-left: 10px;">
-                    <a class="nav-link" href="Acercade.php">Menu</a>
+                    <a class="nav-link" href="Acercade.php">ACERCA DE</a>
                   </li>
                   <li>
                   <?php
