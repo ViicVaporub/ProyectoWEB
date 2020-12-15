@@ -24,9 +24,9 @@
                       BARA DESPLEGABLE
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="Cshare.php">Opcion1</a>
-                      <a class="dropdown-item" href="html.php">Opcion2</a>
-                      <a class="dropdown-item" href="java.php">Opcion3</a>
+                      <a class="dropdown-item" href="Cshare.php">Xbox</a>
+                      <a class="dropdown-item" href="html.php">PlayStation</a>
+                      <a class="dropdown-item" href="java.php">Nintendo</a>
                     </div>
                   </li>
                   <li class="nav-item" style="margin-left: 10px;">
