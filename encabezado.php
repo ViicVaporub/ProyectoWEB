@@ -17,22 +17,22 @@
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                   <li class="nav-item active">
-                    <a class="nav-link" href="inicio.php">INICIO <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="inicio.php" style="margin-left: 320px;">INICIO <span class="sr-only">(current)</span></a>
                   </li>
-                  <li class="nav-item dropdown" style="margin-left: 10px;">
+                  <li class="nav-item dropdown" style="margin-left: 40px;">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      BARA DESPLEGABLE
+                      PRODUCTOS
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="Cshare.php">Xbox</a>
-                      <a class="dropdown-item" href="html.php">PlayStation</a>
-                      <a class="dropdown-item" href="java.php">Nintendo</a>
+                      <a class="dropdown-item" href="Cshare.php">VIDEOJUEGOS</a>
+                      <a class="dropdown-item" href="html.php">CONSOLAS</a>
+                      <a class="dropdown-item" href="java.php">ACCESORIOS Y COLECCIONABLES</a>
                     </div>
                   </li>
-                  <li class="nav-item" style="margin-left: 10px;">
+                  <li class="nav-item" style="margin-left: 40px;">
                     <a class="nav-link" href="contactanos.php">CONTACTANOS</a>
                   </li>
-                  <li class="nav-item" style="margin-left: 10px;">
+                  <li class="nav-item" style="margin-left: 40px;">
                     <a class="nav-link" href="Acercade.php">ACERCA DE</a>
                   </li>
                   <li>
