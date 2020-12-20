@@ -33,6 +33,9 @@
                     <a class="nav-link" href="contactanos.php">CONTACTANOS</a>
                   </li>
                   <li class="nav-item" style="margin-left: 40px;">
+                    <a class="nav-link" href="FAQ.php">FAQ</a>
+                  </li>
+                  <li class="nav-item" style="margin-left: 40px;">
                     <a class="nav-link" href="Acercade.php">ACERCA DE</a>
                   </li>
                   <li class="nav-item" style="margin-left: 140px; margin-top: 4px;"> 
