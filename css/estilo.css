@@ -85,6 +85,7 @@ th,tr{
 }
 .faq{
     background-image: url(../images/fmario.jpg );
+    background-size: auto;
 }
 
 .redes{
@@ -98,8 +99,10 @@ th,tr{
 }
 
 .faql{
-    outline-style: dashed;
     color: black;
+    font-size: 30px;
+    
+    
 }
 .chikito{
     display: flex;
