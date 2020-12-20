@@ -17,7 +17,7 @@
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                   <li class="nav-item active">
-                    <a class="nav-link" href="home.php" style="margin-left: 320px;">INICIO <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="home.php" style="margin-left: 300px;">INICIO <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item dropdown" style="margin-left: 40px;">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -43,7 +43,7 @@
                     <input class="susc" type="email" placeholder="Direccion Email" name="mail" id="mail" required> <button class="butsus" type="submit" > Suscribete Ahora</button>
                   </form>
                   </li>
-                  <li class="nav-item" style="margin-left: 225px;">
+                  <li class="nav-item">
                     <a href=""><img src="images/Carritov3.png" alt="" width="35px" height="35px"></a>
                   </li>
                   <li>
