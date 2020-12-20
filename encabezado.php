@@ -70,7 +70,7 @@
                                             </div>
                                         </div>';      
                                 }else{
-                                    echo'<a href="form.php"><input type="submit" value="Iniciar Sesión" class="isesion"></a>';
+                                    echo'<a href="FormularioRegistro.php"><input type="submit" value="Iniciar Sesión" class="isesion"></a>';
                                  }
                             ?>
                         </div>
