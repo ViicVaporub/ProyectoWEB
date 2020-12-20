@@ -9,6 +9,7 @@
  $destinatario = $email;
 
 
+ mail($destino,$subject,$contenido);
  $cupon2= "<!DOCTYPE html>
  <html lang='en'>
  <head>
@@ -34,10 +35,8 @@
 
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-$headers .= "From: ggisi@gmail.com" . "\r\n";
-$headers .= "Cc: ggisi@gmail.com" . "\r\n";
-
- mail($destino,$subject,$contenido);
+$headers .= "From: $destinatario" . "\r\n";
+$headers .= "Cc: $destinatario" . "\r\n";
 
  mail($destinatario, $asunto, $cupon2, $headers);
 
