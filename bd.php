@@ -20,7 +20,6 @@
 
          if(isset($_POST['submit'])&& !empty($_POST['id'])){
                 //obtenemos datos del formulario
-                $id = $_POST['id'];
                 $nom =$_POST['nombre'];
                 $cuenta =$_POST['cuenta'];
                 $pass =$_POST['contra'];
