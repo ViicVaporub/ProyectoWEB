@@ -33,6 +33,9 @@
                     <a class="nav-link" href="contactanos.php">CONTACTANOS</a>
                   </li>
                   <li class="nav-item" style="margin-left: 40px;">
+                    <a class="nav-link" href="FAQ.php">FAQ</a>
+                  </li>
+                  <li class="nav-item" style="margin-left: 40px;">
                     <a class="nav-link" href="Acercade.php">ACERCA DE</a>
                   </li>
                   <li class="nav-item" style="margin-left: 140px; margin-top: 4px;"> 
@@ -70,7 +73,7 @@
                                             </div>
                                         </div>';      
                                 }else{
-                                    echo'<a href="form.php"><input type="submit" value="Iniciar Sesión" class="isesion"></a>';
+                                    echo'<a href="FormularioRegistro.php"><input type="submit" value="Iniciar Sesión" class="isesion"></a>';
                                  }
                             ?>
                         </div>

@@ -16,6 +16,8 @@ footer li{
     padding: 10px;
 }
 
+
+
 .line{
     width: 260px;
     height: 22px;
@@ -35,6 +37,10 @@ footer{
     background-color: #323232;
     font-size: 18px;
     
+}
+
+.FAQh{
+    text-decoration: wavy underline;
 }
 footer h4{
     font-size: 20px;
