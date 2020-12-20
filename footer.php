@@ -17,7 +17,7 @@
                 <p><a href="#" style="color: white;">Análisis Digital</a></p>
                 <p><a href="#" style="color: white;">Información Web</a></p>
                 <p><a href="#" style="color: white;">Base de datos</a></p>
-¿¿
+
                 </li>
                 <li>Nosotros
                 <div class="line2"></div>        

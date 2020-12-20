@@ -35,6 +35,9 @@
                   <li class="nav-item" style="margin-left: 40px;">
                     <a class="nav-link" href="Acercade.php">ACERCA DE</a>
                   </li>
+                  <li class="nav-item" style="margin-left: 140px; margin-top: 4px;"> 
+                  <input id="=resultado" class="susc" type="email" placeholder="Direccion Email" name="mail" id="mail" required> <input id="butsus" type="submit" >
+                  </li>
                   <li>
                   <?php
                     if(isset($_SESSION["admin"])){
