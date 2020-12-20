@@ -25,6 +25,10 @@ tr,th{
     height: 400px;
     table-layout: fixed;
 }
+.imagenesconsolas{
+    height: 45%;
+    width: 45%; 
+}
 .imghover:hover{
     height: 75%;
     width: 95%;
