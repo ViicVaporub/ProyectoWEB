@@ -25,7 +25,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                       <a class="dropdown-item" href="videojuegos.php">VIDEOJUEGOS</a>
-                      <a class="dropdown-item" href="html.php">CONSOLAS</a>
+                      <a class="dropdown-item" href="consolas.php">CONSOLAS</a>
                       <a class="dropdown-item" href="java.php">ACCESORIOS Y COLECCIONABLES</a>
                     </div>
                   </li>
