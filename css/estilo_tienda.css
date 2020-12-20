@@ -1,0 +1,128 @@
+.fondo{
+    background-color: #ececec;
+}
+.tabla_tienda{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    table-layout: fixed;
+}
+tr,th{
+    
+    text-align: center;
+    border: 5px solid #ececec;
+    border-spacing: 1px;
+}
+.boton{
+    background-color: #f17e1f;
+    border-color: #f17e1f;
+}
+.carrito{
+    background-color: #f17e1f;
+}
+.imagenes{
+    background-color: white;
+    height: 400px;
+    table-layout: fixed;
+}
+.imghover:hover{
+    height: 75%;
+    width: 95%;
+}
+.nombre{
+    background-color: white;
+    height: 50px;
+}
+.precio{
+    background-color: white;
+    height: 50px;
+}
+th{
+    
+    text-align: center;
+}
+    /********FOOTER************/
+
+footer ul{
+    display: flex;
+    justify-content:flex-start;
+    list-style: none;
+    margin: 0;
+    color: white;
+    
+}
+footer a{
+    text-decoration: none;
+    color: white
+}
+footer li{ 
+    padding: 10px;
+}
+
+.line{
+    width: 260px;
+    height: 22px;
+    border-bottom: 5px solid #e5e6ea;
+    position: absolute;
+}
+
+.line2{
+     width: 220px;
+    height: 18px;
+    border-bottom: 1px solid #e5e6ea;
+    position: absolute;
+}
+
+
+footer{
+    background-color: #323232;
+    font-size: 18px;
+    
+}
+footer h4{
+    font-size: 20px;
+}
+.piedepag{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    margin: 0;
+    color: white;
+}
+
+.piedepag a{
+    font-size: 13px;
+    text-align: justify;
+    color: gray;
+}
+.piedepag li p a:hover{
+    text-transform:uppercase;
+}
+
+.redes{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding-right: 80px;
+    margin: 6px;
+    font-size: 30px;
+    color: white;
+}
+.chikito{
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+}
+.susc{
+    background-color: #323232;
+    color: white;
+    text-decoration: white;
+    border-radius: 6px;
+}
+.butsus{
+    background-color: rgb(148, 147, 147);
+    border: 1px solid rgb(148, 147, 147) ;
+    border-radius: 5px;
+    color: white;
+}
+::placeholder { color: white; }
