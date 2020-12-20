@@ -51,7 +51,7 @@
                 <th><input class="boton" type="submit" value="Añadir al carrito"></th>
                 <th><input class="boton" type="submit" value="Añadir al carrito"></th>
             </tr>
-            <tr>
+            <tr class="imagenes">
                 <th><img  class="imghover" src="images/spider.jpg" alt="" width="80%" height="40%"></th>
                 <th><img  class="imghover" src="images/fifa.jpg" width="80%" height="40%" alt=""></th>
                 <th><img  class="imghover" src="images/cyber.jpg" alt="" width="80%" height="40%" ></th>
