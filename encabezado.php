@@ -36,7 +36,9 @@
                     <a class="nav-link" href="Acercade.php">ACERCA DE</a>
                   </li>
                   <li class="nav-item" style="margin-left: 140px; margin-top: 4px;"> 
-                  <input id="=resultado" class="susc" type="email" placeholder="Direccion Email" name="mail" id="mail" required> <input id="butsus" type="submit" >
+                  <form action="enviarsus.php" method="post">
+                    <input class="susc" type="email" placeholder="Direccion Email" name="mail" id="mail" required> <button class="butsus" type="submit" > Suscribete Ahora</button>
+                  </form>
                   </li>
                   <li>
                   <?php
