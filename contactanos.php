@@ -29,20 +29,20 @@
 
         <div class="row">
             <div class="col-md-9 mb-md-0 mb-5">
-                <form id="contactform">
+                <form id="contactform" action="enviar.php" method="post">
 
                     <div class="row">
                         <div class="col-md-6">
                             <div class="md-form mb-0">
-                                <input type="text" name="name" class="form-control">
-                                <label for="name">Nombr</label>
+                                <input type="text" name="name" class="form-control" required>
+                                <label for="name">Nombre</label>
                             </div>
                             
                         </div>
 
                         <div class="col-md-6">
                             <div class="md-form mb-0">
-                                <input type="text" name="email" class="form-control">
+                                <input type="text" name="email" class="form-control" required>
                                 <label for="email">Email</label>
                             </div>
                             
@@ -52,7 +52,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="md-form mb-0">
-                                <input type="text" name="subject" class="form-control">
+                                <input type="text" name="subject" class="form-control" required>
                                 <label for="subject">Motivo</label>
                             </div>
                             
