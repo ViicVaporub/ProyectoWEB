@@ -7,58 +7,50 @@
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Gisci</title>
-    <link rel="stylesheet" href="css/estilo.css">    
+    <link rel="stylesheet" href="css/estilo_tienda.css">     
     <!-- Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     
 </head>
-<body>
+<body class="fondo">
    
    <header>
        <!-- Llamamos al encabezado por medio de include_once -->
         <?php include_once('encabezado.php');?>
     </header>
     
-    <div class="fondo">
-        <table  class="tablaconsolas" style="text-align:center; width: 100%; ">
-            <th>CONSOLAS</th>
-            <th>PRECIO</th>
-            <th>ESPECIFICACIONES</th>
-            <th>IMAGEN</th>
-            <tr>
-                <th>Xbox ONE</th>
-                <th>$6999</th>
-                <th>Arquitectura	64 bits <br> Compañía	AMD <br> Núcleos	8 núcleos<br> Subprocesos	8 procesos<br>Frec. base	1.6 GHz</th>
-                <th><img src="images/xboxone.png" alt="" width="150px" height="150px"></th>
-                <th><input type="submit" value="COMPRAR"></th>
+    <div>
+        <table class="tabla_tienda">
+            <tr class="imagenesconsolas">
+                <th><img  class="imghover" src="images/xboxone.png" alt="" width="80%" height="40%"></th>
+                <th><img  class="imghover" src="images/play4.png" width="80%" height="40%" alt=""></th>
+                <th><img  class="imghover" src="images/series.png" alt="" width="80%" height="40%" ></th>
+                <th><img  class="imghover" src="images/play5.png" alt="" width="80%" height="40%"></th>
+                <th><img  class="imghover" src="images/nintendo.png" alt="" width="80%" height="40%"></th>
             </tr>
-             <tr>
+            <tr class="nombre">
+                <th>Xbox One</th>
                 <th>Playstation 4</th>
-                <th>$6999</th>
-                <th>Procesador	CPU: AMD "Jaguar", 8 núcleos. <br> GPU: 1,84 TFLOPS, AMD Radeon <br>
-                Memoria RAM	8GB GDDR5 <br> Almacenamiento	500GB, 1TB <br> Dimensiones	275 x 53 x 305 mm</th>
-                <th><img src="images/play4.png" alt="" width="150px" height="150px"></th>
-                <th><input type="submit" value="COMPRAR"></th>
-            </tr> 
-            <tr>
                 <th>Xbox Series</th>
-                <th>$13999</th>
-                <th>PROCESADOR. CPU. CPU Zen 2 personaliza de 8 núcleos a 3,8 GHz (3,66 GHz con SMT) <br>
-                MEMORIA Y ALMACENAMIENTO. Memoria. <br> GDDR6 de 16 GB con bus de 320 bits de ancho <br>
-                FUNCIONALIDADES DE VIDEO. <br> Resolución de juego. Auténtico 4K
-                PUERTOS Y CONECTIVIDAD. HDMI DISEÑO. <br> Dimensiones 15,1 cm x 15,1 cm x 30,1 cm.</th>
-                <th><img src="images/series.png" alt="" width="150px" height="150px"></th>
-                <th><input type="submit" value="COMPRAR"></th>
-            </tr>  
-            <tr>
                 <th>Playstation 5</th>
+                <th>Nintendo Switch</th>
+            </tr>
+            <tr class="precio">
+                <th>$7999</th>
+                <th>$7999</th>
                 <th>$13999</th>
-                <th>Procesador	CPU AMD Ryzen Zen 2 de ocho núcleos a 3.6GHz <br> Tarjeta Gráfica	AMD Radeon RDNA 2 GPU personalizada con 36 CU a 2.23 GHz (10.3 teraflops) <br> VRAM	16GB GDDR6/256-bit <br>Almacenamiento	825GB SSD <br>Unidad óptica	Sí, 4K Blu-ray</th>
-                <th><img src="images/play5.png" alt="" width="150px" height="150px"></th>
-                <th><input type="submit" value="COMPRAR"></th>
-             </tr>        
+                <th>$13999</th>
+                <th>$5999</th>
+            </tr>
+            <tr class="carrito">
+                <th><input class="boton" type="submit" value="Añadir al carrito"></th>
+                <th><input class="boton" type="submit" value="Añadir al carrito"></th>
+                <th><input class="boton" type="submit" value="Añadir al carrito"></th>
+                <th><input class="boton" type="submit" value="Añadir al carrito"></th>
+                <th><input class="boton" type="submit" value="Añadir al carrito"></th>
+            </tr>
         </table>
     </div>
               
