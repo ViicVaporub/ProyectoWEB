@@ -40,6 +40,9 @@
                     <input class="susc" type="email" placeholder="Direccion Email" name="mail" id="mail" required> <button class="butsus" type="submit" > Suscribete Ahora</button>
                   </form>
                   </li>
+                  <li class="nav-item" style="margin-left: 225px;">
+                    <a href=""><img src="images/Carritov3.png" alt="" width="35px" height="35px"></a>
+                  </li>
                   <li>
                   <?php
                     if(isset($_SESSION["admin"])){
