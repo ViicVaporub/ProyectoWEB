@@ -23,7 +23,7 @@
     
     <div class="fondo">
         <table  class="tablaconsolas" style="text-align:center; width: 100%; ">
-            <th>CONSOLA</th>
+            <th>HOLA LO ACABO DE MODIFICAR</th>
             <th>PRECIO</th>
             <th>ESPECIFICACIONES</th>
             <th>IMAGEN</th>
