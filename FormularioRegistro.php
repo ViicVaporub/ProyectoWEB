@@ -58,17 +58,18 @@
                             <h3 id="n-color">Registro</h3>
                             <button type="button" class="close font-weight-light" data-dismiss="modal" aria-hidden="true">×</button>
                         </div>
-                        <form class="form" role="form" action="registro.php" method="post">
+                        <form class="form" role="form" action="registro.php" method="post" name="clave">
                             <div class="modal-body">
 
                                 <p>Nombre: <input type="text" name="login" style="margin-left: 14px;"> </p>
-                                <p>Contraseña: <input type="text" name="contra" style="margin-left: 10px;"> </p>
-                                <p>Correo: <input type="text" name="correo" style="margin-left: 23px;"> </p>
+                                <p>Contraseña: <input type="password" name="contra1" style="margin-left: 10px;"> </p>
+                                <p>Verificar Contraseña: <input type="password" name="contra2" style="margin-left: 10px;"> </p>
+                                <p>Correo: <input type="email" name="correo" style="margin-left: 23px;"> </p>
 
                             </div>
                             <div class="modal-footer">
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                                    <button type="submit" class="btn btn-primary btn-block" onclick="comprobarClave()">Enviar</button>
                                 </div>
                             </div>
                         </form>
@@ -90,5 +91,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/comprobarclave.js"></script>
 </body>
 </html>
