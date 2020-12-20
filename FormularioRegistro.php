@@ -62,8 +62,10 @@
                             <div class="modal-body">
 
                                 <p>Nombre: <input type="text" name="login" style="margin-left: 14px;"> </p>
-                                <p>Contraseña: <input type="text" name="contra" style="margin-left: 10px;"> </p>
+                                <p>Contraseña: <input type="password" name="contra" style="margin-left: 10px;"> </p>
+                                <p>Confirmacion: <input type="password" name="contra" style="margin-left: 10px;" placeholder="Confirmacion de contraseña"> </p>
                                 <p>Correo: <input type="text" name="correo" style="margin-left: 23px;"> </p>
+                                
 
                             </div>
                             <div class="modal-footer">
