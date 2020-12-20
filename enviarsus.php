@@ -5,7 +5,7 @@ $mail = $_POST['mail'];
 $destinatario = "$mail";
 $asunto= "Gracias por Suscribirte a nuestra WEB";
 
-$carta =  "<section>
+$carta = print "<section>
                     <div style='display: flex; align-items: center; margin-left: 570px; width: 700px;'>
                        <img src='images/gigi.png' alt='' width='100px' height='100p'>
                        <h2 style='font-family: 'Courier New';'>Gisi</h2>
@@ -20,4 +20,6 @@ $carta =  "<section>
 
 
 mail($destinatario, $asunto, $carta);
+
+header("Location: home.php");
 ?>
