@@ -40,11 +40,16 @@ footer{
 }
 
 .FAQh{
-    text-decoration: wavy underline;
+    text-decoration: underline;
+}
+
+faqt{
+    border: 0;
 }
 footer h4{
     font-size: 20px;
 }
+
 .tablaconsolas{
    width: 100%;
    border: 1px solid #000;
@@ -78,6 +83,9 @@ th,tr{
 .piedepag li p a:hover{
     text-transform:uppercase;
 }
+.faq{
+    background-image: url(../images/fmario.jpg );
+}
 
 .redes{
     display: flex;
@@ -87,6 +95,11 @@ th,tr{
     margin: 6px;
     font-size: 30px;
     color: white;
+}
+
+.faql{
+    outline-style: dashed;
+    color: black;
 }
 .chikito{
     display: flex;

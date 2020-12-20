@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body class="faq">
    
    <header>
        <!-- Llamamos al encabezado por medio de include_once -->
@@ -24,12 +24,19 @@
    <h1>Preguntas Frecuentes (FAQ)</h1>
    <br><br>
    <h3 class="FAQh">¿En que podemos Ayudarte?</h3>
-       <ul>
-           <li>¿Donde realizar pagos?</li>
-           <li>¿Cuanto tiempo tarda en llegar un producto?</li>
-           <li>¿Cuanto tiempo tienen de garantía nuestros productos?</li>
+       <ul class="faql">
+           <ul><b>¿Donde realizar pagos?</b>
+           <li>Oxxo</li>
+           <li>Pagos en efectivo</li>
+           <li>Pago con tarjeta de credito</li>
+           <li>Paypal</li>
+           </ul>
+           <ul><b>¿Cuanto tiempo tarda en llegar un producto?</b>
+           <li>Nuestros productos tienen un tiempo de envio maximo de 2 días de lunes a viernes <br>(no realizamos envios los fines de semana)</li>
+           </ul>
+           <ul><b>¿Cuanto tiempo tienen de garantía nuestros productos?</b>
+           <li>Nuestros productos cuentan con garantia de 6 meses en consolas y 1 mes en accesorios <br>(los videojuegos no cuentan con garantia)</li></ul>
        </ul>
-  
     <footer>
        <!-- Llamamos al pie de pagina por medio de include_once -->
         <?php include_once('footer.php');?>

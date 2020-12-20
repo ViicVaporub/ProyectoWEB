@@ -24,29 +24,53 @@
     <div>
         <table class="tabla_tienda">
             <tr class="imagenes">
-
-
-
-                <th><img  class="imghover" src="images/xboxone.jpg" alt="" width="80%" height="70%"></th>
-                <th><img  class="imghover" src="images/play4.jpg" width="80%" height="70%" alt=""></th>
-                <th><img  class="imghover" src="images/series.jpg" alt="" width="80%" height="70%" ></th>
-                <th><img  class="imghover" src="images/play5.jpg" alt="" width="80%" height="70%"></th>
-                <th><img  class="imghover" src="images/nintendo.jpg" alt="" width="80%" height="70%"></th>
-
+                <th><img  class="imghover" src="images/smash.jpg" alt="" width="80%" height="40%"></th>
+                <th><img  class="imghover" src="images/GTA.jpg" width="80%" height="40%" alt=""></th>
+                <th><img  class="imghover" src="images/cod.jpg" alt="" width="80%" height="40%" ></th>
+                <th><img  class="imghover" src="images/halo.jpg" alt="" width="80%" height="40%"></th>
+                <th><img  class="imghover" src="images/ow.jpg" alt="" width="80%" height="40%"></th>
             </tr>
             <tr class="nombre">
-                <th>Xbox One</th>
-                <th>Playstation 4</th>
-                <th>Xbox Series</th>
-                <th>Playstation 5</th>
-                <th>Nintendo Switch</th>
+                <th>Super Smash Bros</th>
+                <th>GTA V</th>
+                <th>Call of Duty Modern Warfare</th>
+                <th>Halo 5</th>
+                <th>Overwatch</th>
             </tr>
             <tr class="precio">
-                <th>$7999</th>
-                <th>$7999</th>
-                <th>$13999</th>
-                <th>$13999</th>
-                <th>$5999</th>
+                <th>$1199</th>
+                <th>$899</th>
+                <th>$799</th>
+                <th>$699</th>
+                <th>$499</th>
+            </tr>
+            <tr class="carrito">
+                <th><input class="boton" type="submit" value="Añadir al carrito"></th>
+                <th><input class="boton" type="submit" value="Añadir al carrito"></th>
+                <th><input class="boton" type="submit" value="Añadir al carrito"></th>
+                <th><input class="boton" type="submit" value="Añadir al carrito"></th>
+                <th><input class="boton" type="submit" value="Añadir al carrito"></th>
+            </tr>
+            <tr class="imagenes">
+                <th><img  class="imghover" src="images/spider.jpg" alt="" width="80%" height="40%"></th>
+                <th><img  class="imghover" src="images/fifa.jpg" width="80%" height="40%" alt=""></th>
+                <th><img  class="imghover" src="images/cyber.jpg" alt="" width="80%" height="40%" ></th>
+                <th><img  class="imghover" src="images/gears.jpg" alt="" width="80%" height="40%"></th>
+                <th><img  class="imghover" src="images/ass.jpg" alt="" width="80%" height="40%"></th> 
+            </tr>
+            <tr class="nombre">
+                <th>Spider Man</th>
+                <th>Fifa 21</th>
+                <th>Cyberpunk</th>
+                <th>Gears of war 5</th>
+                <th>Assasins</th>
+            </tr>
+            <tr class="precio">
+                <th>$1199</th>
+                <th>$799</th>
+                <th>$1299</th>
+                <th>$699</th>
+                <th>$1199</th>
             </tr>
             <tr class="carrito">
                 <th><input class="boton" type="submit" value="Añadir al carrito"></th>
