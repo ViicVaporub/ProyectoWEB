@@ -25,6 +25,7 @@ tr,th{
     height: 400px;
     table-layout: fixed;
 }
+
 .imghover:hover{
     height: 75%;
     width: 95%;
