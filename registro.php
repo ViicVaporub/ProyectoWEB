@@ -23,7 +23,8 @@
            
 <?php
             $usuario = $_POST["login"];
-            $contra = $_POST["contra"];
+            $contra1 = $_POST["contra1"];
+            $contra2 = $_POST["contra2"];
             $correo = $_POST["correo"];
             
 
@@ -31,8 +32,8 @@
     
     
     
-     
-            $file = fopen("archivo.txt","a+");
+    
+                $file = fopen("archivo.txt","a+");
      
             fwrite($file, $usuario." ".$contra." ".$correo."\r\n");
     
@@ -41,6 +42,7 @@
             echo "<br><h2 style='text-align: center;'>Te has registrado exitosamente<h2>  <br><hr>";
 
             echo "<br><a href='FormularioRegistro.php' style='margin-left:580px;'>Ve a iniciar sesion!</a><br><br><br><br>";
+            
         ?>    
 
 

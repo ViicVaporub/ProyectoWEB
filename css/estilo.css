@@ -32,7 +32,13 @@ footer li{
     position: absolute;
 }
 
-
+.warnings{
+    width 200px;
+    text-align: center;
+    margin: auto;
+    color: crimson;
+    padding-top: 20px;
+}
 footer{
     background-color: #323232;
     font-size: 18px;
