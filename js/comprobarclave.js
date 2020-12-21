@@ -5,7 +5,9 @@ function comprobarclave () {
     if(c1 != c2){
         alert("Las contraseñas no coinciden")
         return false;
-    }
+    }else{
         return true;
+    }
+       
     
 }
