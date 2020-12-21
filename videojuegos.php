@@ -24,11 +24,11 @@
     <div>
         <table class="tabla_tienda">
             <tr class="imagenes">
-                <th><img  class="imghover" src="images/smash.jpg" alt="" width="80%" height="40%"></th>
-                <th><img  class="imghover" src="images/GTA.jpg" width="80%" height="40%" alt=""></th>
-                <th><img  class="imghover" src="images/cod.jpg" alt="" width="80%" height="40%" ></th>
-                <th><img  class="imghover" src="images/halo.jpg" alt="" width="80%" height="40%"></th>
-                <th><img  class="imghover" src="images/ow.jpg" alt="" width="80%" height="40%"></th>
+                <th><img  class="imghover" src="images/SSBU.jpg" alt="" width="80%" height="70%"></th>
+                <th><img  class="imghover" src="images/GTAV.jpg" width="80%" height="70%" alt=""></th>
+                <th><img  class="imghover" src="images/codmw.jpg" alt="" width="80%" height="70%" ></th>
+                <th><img  class="imghover" src="images/Halo5.jpg" alt="" width="80%" height="70%"></th>
+                <th><img  class="imghover" src="images/overwatch.jpg" alt="" width="80%" height="70%"></th>
             </tr>
             <tr class="nombre">
                 <th>Super Smash Bros</th>
@@ -52,11 +52,11 @@
                 <th><input class="boton" type="submit" value="Añadir al carrito"></th>
             </tr>
             <tr class="imagenes">
-                <th><img  class="imghover" src="images/spider.jpg" alt="" width="80%" height="40%"></th>
-                <th><img  class="imghover" src="images/fifa.jpg" width="80%" height="40%" alt=""></th>
-                <th><img  class="imghover" src="images/cyber.jpg" alt="" width="80%" height="40%" ></th>
-                <th><img  class="imghover" src="images/gears.jpg" alt="" width="80%" height="40%"></th>
-                <th><img  class="imghover" src="images/ass.jpg" alt="" width="80%" height="40%"></th> 
+                <th><img  class="imghover" src="images/Spiderman.jpg" alt="" width="80%" height="70%"></th>
+                <th><img  class="imghover" src="images/Fifa21.jpg" width="80%" height="70%" alt=""></th>
+                <th><img  class="imghover" src="images/Cyberpunk.jpg" alt="" width="80%" height="70%" ></th>
+                <th><img  class="imghover" src="images/Gears%205.jpg" alt="" width="80%" height="70%"></th>
+                <th><img  class="imghover" src="images/ACV.jpg" alt="" width="80%" height="70%"></th> 
             </tr>
             <tr class="nombre">
                 <th>Spider Man</th>
