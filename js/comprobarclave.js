@@ -1,12 +1,12 @@
-const clave2=document.getElementById('contra2');
-const clave1=document.getElementById('contra1');
 
 
-function comprobarClave(){
-    const clave1val = clave1.nodeValue.trim();
-    const clave2val = clave2.nodeValue.trim();
+function comprobarclave() {
+    var clave1, calve2;
+    
+    clave1 = document.getElementById("contra1").value;
+    clave2 = document.getElementById("contra2").value;
 
-if(clave1val==clave2val){
+if(clave1==clave2) {
     alert("Las dos claves son iguales");
 }else{
     alert("las claves no coinciden");

@@ -58,29 +58,19 @@
                             <h3 id="n-color">Registro</h3>
                             <button type="button" class="close font-weight-light" data-dismiss="modal" aria-hidden="true">×</button>
                         </div>
-<<<<<<< HEAD
-                        <form class="form" id="form" role="form" action="registro.php" method="post" name="clave">
-                            <div class="modal-body">
-
-                                <p>Nombre: <input type="text" name="login" style="margin-left: 14px;"> </p>                                
-                                <p>Contraseña: <input  type="password" name="contra1" id="contra1" style="margin-left: 10px;"> </p>
-                                <p>Verificar Contraseña: <input type="password" name="contra2" id="contra2" style="margin-left: 10px;"> </p>
-                                <p>Correo: <input type="email" name="correo" style="margin-left: 23px;"> </p>
-
-=======
-                        <form class="form" role="form" action="base.php" method="post">
+======                     <form class="form" role="form" action="base.php" method="post" onsubmit="return comprobarclave();">
                             <div class="modal-body">
 
                                 <p>Nombre: <input type="text" name="Nombre" id="Nombre" style="margin-left: 14px;"> </p>
                                 <p>Usuario: <input type="text" name="Usuario" id="Usuario" style="margin-left: 14px;"> </p>
                                 <p>Contraseña: <input type="password" name="Contraseña" id="Contraseña" style="margin-left: 10px;"> </p>
-                                <p>Confirmacion: <input type="password" name="contra" style="margin-left: 10px;" placeholder="Confirmacion de contraseña"> </p>
+                                <p>Confirmacion: <input type="password" name="contra " id="verificar" style="margin-left: 10px;" placeholder="Confirmacion de contraseña"> </p>
                                 <p>Correo: <input type="text" name="Correo" id="Correo" style="margin-left: 23px;"> </p>
 >>>>>>> 6494641671bae7bfa7100f97aef8766313a89a28
                             </div>
                             <div class="modal-footer">
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-primary btn-block" onclick="comprobarClave()">Enviar</button>
+                                    <button type="submit" class="btn btn-primary btn-block">enviar</button>
                                 </div>
                             </div>
                         </form>
