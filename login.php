@@ -20,6 +20,7 @@ session_start();
                 $passwd = $fila['Contrasena'];
                 if(password_verify($contra, $passwd)){
                     session_start();
+                    $_SESSION["usuario"] = "$usuario";
                     header("Location: home.php");
                 }else{
                     
