@@ -8,8 +8,10 @@ function comprobarclave() {
 
 if(clave1==clave2) {
     alert("Las dos claves son iguales");
+    return true;
 }else{
     alert("las claves no coinciden");
+    return false;
 }
 
 }
