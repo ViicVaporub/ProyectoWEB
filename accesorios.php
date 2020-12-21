@@ -1,3 +1,16 @@
+<?php 
+
+$servidor='localhost';
+$cuenta='root';
+$password='';
+$bd='u458624775_Productos';
+
+$conexion =  mysqli_connect($servidor, $nombreusuario, $password, $bd);
+
+$sql = 'select * from productos';
+$resultado = $conexion -> query($sql);
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -23,35 +36,22 @@
     
     <div>
        <img src="images/Anuncio.jpg"  style="width:100%; height: 200px;" alt="">
-        <table class="tabla_tienda">
-            <tr class="imagenes">
-                <th><img  class="imghover" src="images/productos/Redragon.jpg" alt="" width="80%" height="70%"></th>
-                <th><img  class="imghover" src="images/productos/Teclado.jpg" width="80%" height="70%" alt=""></th>
-                <th><img  class="imghover" src="images/productos/cascos.jpg" alt="" width="80%" height="70%" ></th>
-                <th><img  class="imghover" src="images/productos/silla.jpg" alt="" width="80%" height="70%"></th>
-                <th><img  class="imghover" src="images/productos/control.jpg" alt="" width="80%" height="70%"></th>
+        <table class="tablita">
+           <?php
+            while($fila = $resultado -> fetch_assoc()){
+                $imagen = $fila['imagen'];
+                $nombre = $fila['nombre'];
+                $precio = $fila['precio'];
+            ?>
+            <tr>
+                <th class="imagen"><img class="imgenhover" src="images/productos/<?php echo $imagen; ?>" alt="" width="70%" height="80%"></th>
+                <th class="nombre"> <?php echo $nombre; ?> </th>
+                <th class="precio"> <?php echo $precio; ?> </th>
+                <th class="botonf"><input class="boton" type="submit" value="Añadir al carrito"><img class="carrito" src="images/carrito.jpg" alt=""></th>
             </tr>
-            <tr class="nombre">
-                <th>Kit Mouse Gamer Redragon Centrophorus C/ Mousepad M601-ba</th>
-                <th>Game Factor Teclado Mecánico Gamer KBG400-RD, Rainbow, Switch Red</th>
-                <th>Auricular sv 5334</th>
-                <th>Silla gamer RAIDMAX DK-706 BLACK/RED</th>
-                <th>Xbox Elite Wireless Controller Series 2</th>
-            </tr>
-            <tr class="precio">
-                <th>$2240</th>
-                <th>$12480</th>
-                <th>$3452</th>
-                <th>$8921</th>
-                <th>$1199</th>
-            </tr>
-            <tr class="carrito">
-                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
-                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
-                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
-                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
-                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
-            </tr>
+            <?php
+            }
+            ?>    
         </table>
     </div>
               
