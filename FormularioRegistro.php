@@ -43,9 +43,13 @@
                 <hr>
                 <input type="submit" value="Iniciar sesión"><br>
                 <div class="form-group text-center">
+    <center>
+    <h2>Elige tu país:</h2>
+        <a href="cookie2.php?pais=mx"><img src="images/mx.png" width="200px" height="100px" /></a>
+        <a href="cookie2.php?pais=us"><img src="images/us.png" width="200px" height="100px"/></a>
+        <a href="cookie2.php?pais=fr"><img src="images/fr.png" width="200px" height="100px"/></a>
+    </center>
                                    <hr><hr>
-
-
                     <h4>Crear una cuenta</h4>
                     <small><a href="#" data-toggle="modal" data-target="#modalPassword">REGISTRARME</a></small>
                 </div>
