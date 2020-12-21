@@ -1,11 +1,11 @@
 <?php 
 
-$servidor='localhost';
-$cuenta='root';
-$password='';
-$bd='u458624775_Productos';
+$servidor = "localhost"; 
+$nombreusuario = "u458624775_RISVB";
+$password = "Patas_123";
+$bd = "u458624775_Productos";
 
-$conexion =  mysqli_connect($servidor, $cuenta, $password, $bd);
+$conexion =  mysqli_connect($servidor, $nombreusuario, $password, $bd);
 
 $sql = 'select * from productos';
 $resultado = $conexion -> query($sql);
