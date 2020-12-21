@@ -31,7 +31,7 @@
                 <div class="line2"></div>        
                 <br>
                 <br>
-                <p><a href="pagina1.html" style="color: white;">Centro de ayuda</a></p>
+                <p><a href="logueado_correcto.php" style="color: white;">Centro de ayuda</a></p>
                 <p><a href="#" style="color: white;">Localizador</a></p>
                 <p><a href="pagina1.html" style="color: white;">Teléfonos</a></p>
                 </li>
