@@ -37,7 +37,7 @@
                 <!-- <input name="usuario" type="text" placeholder="Escribe tu nombre de usuario"> -->
                 <br>
                 <h3>CONTRASEÑA:</h3>
-                <input name="palabra_secreta" id="passwordInput" placeholder="Contraseña" type="password" required="">
+                <input name="Contraseña" id="passwordInput" placeholder="Contraseña" type="password" required="">
                 <input type="hidden" name="array" value='<?php echo serialize($cuentas); ?>'>
                 <br><br>
                 <hr>
