@@ -1,3 +1,16 @@
+<?php 
+
+$servidor = "localhost"; 
+$nombreusuario = "u458624775_RISVB";
+$password = "Patas_123";
+$bd = "u458624775_Productos";
+
+$conexion =  mysqli_connect($servidor, $nombreusuario, $password, $bd);
+
+$sql = 'select * from productos';
+$resultado = $conexion -> query($sql);
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -23,39 +36,22 @@
     
     <div>
        <img src="images/Anuncio.jpg"  style="width:100%; height: 200px;" alt="">
-        <table class="tabla_tienda">
-            <tr class="imagenes">
-
-
-
-                <th><img  class="imghover" src="images/productos/xboxone.jpg" alt="" width="80%" height="70%"></th>
-                <th><img  class="imghover" src="images/productos/play4.jpg" width="80%" height="70%" alt=""></th>
-                <th><img  class="imghover" src="images/productos/series.jpg" alt="" width="80%" height="70%" ></th>
-                <th><img  class="imghover" src="images/productos/play5.jpg" alt="" width="80%" height="70%"></th>
-                <th><img  class="imghover" src="images/productos/nintendo.jpg" alt="" width="80%" height="70%"></th>
-
+        <table class="tablita">
+           <?php
+            while($fila = $resultado -> fetch_assoc()){
+                $imagen = $fila['imagen'];
+                $nombre = $fila['nombre'];
+                $precio = $fila['precio'];
+            ?>
+            <tr>
+                <th class="imagen"><img class="imgenhover" src="images/productos/<?php echo $imagen; ?>" alt="" width="70%" height="80%"></th>
+                <th class="nombre"> <?php echo $nombre; ?> </th>
+                <th class="precio"> <?php echo $precio; ?> </th>
+                <th class="botonf"><input class="boton" type="submit" value="Añadir al carrito"><img class="carrito" src="images/carrito.jpg" alt=""></th>
             </tr>
-            <tr class="nombre">
-                <th>Xbox One</th>
-                <th>Playstation 4</th>
-                <th>Xbox Series</th>
-                <th>Playstation 5</th>
-                <th>Nintendo Switch</th>
-            </tr>
-            <tr class="precio">
-                <th>$7999</th>
-                <th>$7999</th>
-                <th>$13999</th>
-                <th>$13999</th>
-                <th>$5999</th>
-            </tr>
-            <tr class="carrito">
-                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
-                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
-                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
-                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
-                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
-            </tr>
+            <?php
+            }
+            ?>    
         </table>
     </div>
               
