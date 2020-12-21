@@ -1,3 +1,19 @@
+<?php 
+
+$servidor='localhost';
+$cuenta='root';
+$password='';
+$bd='u458624775_Productos';
+
+$conexion = new mysqli($servidor,$cuenta,$password,$bd);
+
+$sql = 'select * from productos';
+$resultado = $conexion -> query($sql);
+$resultado2 = $conexion -> query($sql);
+$resultado3 = $conexion -> query($sql);
+
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -22,28 +38,54 @@
     </header>
     
     <div>
+      
        <img src="images/Anuncio.jpg"  style="width:100%; height: 200px;" alt="">
         <table class="tabla_tienda">
             <tr class="imagenes">
-                <th><img  class="imghover" src="images/SSBU.jpg" alt="" width="80%" height="70%"></th>
-                <th><img  class="imghover" src="images/GTAV.jpg" width="80%" height="70%" alt=""></th>
-                <th><img  class="imghover" src="images/codmw.jpg" alt="" width="80%" height="70%" ></th>
-                <th><img  class="imghover" src="images/Halo5.jpg" alt="" width="80%" height="70%"></th>
-                <th><img  class="imghover" src="images/overwatch.jpg" alt="" width="80%" height="70%"></th>
+                <th><img  class="imghover" src="images/productos/SSBU.jpg" alt="" width="80%" height="70%"></th>
+                <th><img  class="imghover" src="images/productos/GTAV.jpg" width="80%" height="70%" alt=""></th>
+                <th><img  class="imghover" src="images/productos/codmw.jpg" alt="" width="80%" height="70%" ></th>
+                <th><img  class="imghover" src="images/productos/Halo5.jpg" alt="" width="80%" height="70%"></th>
+                <th><img  class="imghover" src="images/productos/overwatch.jpg" alt="" width="80%" height="70%"></th>
             </tr>
             <tr class="nombre">
-                <th>Super Smash Bros Ultimate</th>
-                <th>Grand Theft Auto V</th>
-                <th>Call of Duty Modern Warfare</th>
-                <th>Halo 5</th>
-                <th>Overwatch</th>
+               <?php
+                    $fila = $resultado -> fetch_assoc();
+                    $nombre = $fila ['nombre']
+                    ?><th><?php echo $nombre; ?></th><?php
+                    $fila = $resultado -> fetch_assoc();
+                    $nombre = $fila ['nombre']
+                    ?><th><?php echo $nombre; ?></th><?php
+                    $fila = $resultado -> fetch_assoc();
+                    $nombre = $fila ['nombre']
+                    ?><th><?php echo $nombre; ?></th><?php
+                    $fila = $resultado -> fetch_assoc();
+                    $nombre = $fila ['nombre']
+                    ?><th><?php echo $nombre; ?></th><?php
+                    $fila = $resultado -> fetch_assoc();
+                    $nombre = $fila ['nombre']
+                    ?><th><?php echo $nombre; ?></th><?php
+                ?>
             </tr>
+      
             <tr class="precio">
-                <th>$1199</th>
-                <th>$899</th>
-                <th>$799</th>
-                <th>$699</th>
-                <th>$499</th>
+                <?php
+                    $fila = $resultado -> fetch_assoc();
+                    $precio = $fila ['precio']
+                    ?><th><?php echo $precio; ?></th><?php
+                    $fila = $resultado -> fetch_assoc();
+                    $precio = $fila ['precio']
+                    ?><th><?php echo $precio; ?></th><?php
+                    $fila = $resultado -> fetch_assoc();
+                    $precio = $fila ['precio']
+                    ?><th><?php echo $precio; ?></th><?php
+                    $fila = $resultado -> fetch_assoc();
+                    $precio = $fila ['precio']
+                    ?><th><?php echo $precio; ?></th><?php
+                    $fila = $resultado -> fetch_assoc();
+                    $precio = $fila ['precio']
+                    ?><th><?php echo $precio; ?></th><?php
+                ?>
             </tr>
             <tr class="carrito">
                 <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
@@ -53,25 +95,59 @@
                 <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
             </tr>
             <tr class="imagenes">
-                <th><img  class="imghover" src="images/Spiderman.jpg" alt="" width="80%" height="70%"></th>
-                <th><img  class="imghover" src="images/Fifa21.jpg" width="80%" height="70%" alt=""></th>
-                <th><img  class="imghover" src="images/Cyberpunk.jpg" alt="" width="80%" height="70%" ></th>
-                <th><img  class="imghover" src="images/Gears%205.jpg" alt="" width="80%" height="70%"></th>
-                <th><img  class="imghover" src="images/ACV.jpg" alt="" width="80%" height="70%"></th> 
+                <th><img  class="imghover" src="images/productos/Spiderman.jpg" alt="" width="80%" height="70%"></th>
+                <th><img  class="imghover" src="images/productos/Fifa21.jpg" width="80%" height="70%" alt=""></th>
+                <th><img  class="imghover" src="images/productos/Cyberpunk.jpg" alt="" width="80%" height="70%" ></th>
+                <th><img  class="imghover" src="images/productos/Gears%205.jpg" alt="" width="80%" height="70%"></th>
+                <th><img  class="imghover" src="images/productos/ACV.jpg" alt="" width="80%" height="70%"></th> 
             </tr>
             <tr class="nombre">
-                <th>Spider Man Miles Morales</th>
-                <th>Fifa 21</th>
-                <th>Cyberpunk 2077</th>
-                <th>Gears of war 5</th>
-                <th>Assassin's Creed Valhalla</th>
+                <?php
+                    $fila = $resultado2 -> fetch_assoc();
+                    $fila = $resultado2 -> fetch_assoc();
+                    $fila = $resultado2 -> fetch_assoc();
+                    $fila = $resultado2 -> fetch_assoc();
+                    $fila = $resultado2 -> fetch_assoc();
+                    $fila = $resultado2 -> fetch_assoc();
+                    $nombre = $fila ['nombre']
+                    ?><th><?php echo $nombre; ?></th><?php
+                    $fila = $resultado2 -> fetch_assoc();
+                    $nombre = $fila ['nombre']
+                    ?><th><?php echo $nombre; ?></th><?php
+                    $fila = $resultado2 -> fetch_assoc();
+                    $nombre = $fila ['nombre']
+                    ?><th><?php echo $nombre; ?></th><?php
+                    $fila = $resultado2 -> fetch_assoc();
+                    $nombre = $fila ['nombre']
+                    ?><th><?php echo $nombre; ?></th><?php
+                    $fila = $resultado2 -> fetch_assoc();
+                    $nombre = $fila ['nombre']
+                    ?><th><?php echo $nombre; ?></th><?php
+                ?>
             </tr>
             <tr class="precio">
-                <th>$1199</th>
-                <th>$799</th>
-                <th>$1299</th>
-                <th>$699</th>
-                <th>$1199</th>
+            <?php
+                    $fila = $resultado3 -> fetch_assoc();
+                    $fila = $resultado3 -> fetch_assoc();
+                    $fila = $resultado3 -> fetch_assoc();
+                    $fila = $resultado3 -> fetch_assoc();
+                    $fila = $resultado3 -> fetch_assoc();
+                    $fila = $resultado3 -> fetch_assoc();
+                    $precio = $fila ['precio']
+                    ?><th><?php echo $precio; ?></th><?php
+                    $fila = $resultado3 -> fetch_assoc();
+                    $precio = $fila ['precio']
+                    ?><th><?php echo $precio; ?></th><?php
+                    $fila = $resultado3 -> fetch_assoc();
+                    $precio = $fila ['precio']
+                    ?><th><?php echo $precio; ?></th><?php
+                    $fila = $resultado3 -> fetch_assoc();
+                    $precio = $fila ['precio']
+                    ?><th><?php echo $precio; ?></th><?php
+                    $fila = $resultado3 -> fetch_assoc();
+                    $precio = $fila ['precio']
+                    ?><th><?php echo $precio; ?></th><?php
+                ?>
             </tr>
             <tr class="carrito">
                 <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>

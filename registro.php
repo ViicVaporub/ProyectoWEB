@@ -32,7 +32,7 @@
     
     
     
-            if($contra1==$contra2){
+    
                 $file = fopen("archivo.txt","a+");
      
             fwrite($file, $usuario." ".$contra." ".$correo."\r\n");
@@ -42,9 +42,6 @@
             echo "<br><h2 style='text-align: center;'>Te has registrado exitosamente<h2>  <br><hr>";
 
             echo "<br><a href='FormularioRegistro.php' style='margin-left:580px;'>Ve a iniciar sesion!</a><br><br><br><br>";
-            }else{
-                header('Location:'.$Ferror.php)
-            }
             
         ?>    
 
