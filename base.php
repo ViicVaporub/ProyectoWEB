@@ -17,13 +17,10 @@
     $email = $_POST["Correo"];
     $contra = $_POST["Contraseña"];
  
-    echo $nombre;
-    echo $usuario;
-    echo $email;
-    echo $contra;
+    $encrip = password_hash($contra, PASSWORD_DEFAULT, ['cost' => 10]);
 
 
-    $sql = "INSERT INTO Usuario(Nombre, Usuario, Correo, Contrasena) VALUES ('$nombre', '$usuario', '$email', '$contra')";
+    $sql = "INSERT INTO Usuario(Nombre, Usuario, Correo, Contrasena) VALUES ('$nombre', '$usuario', '$email', '$encrip')";
 
     if(mysqli_query($conexion,$sql) === true){
         echo "Se creo la tabla correctamente";
@@ -32,6 +29,6 @@
     }
     mysqli_close($conexion);     
           
-
+    header("Location: logueado_correcto.php");
 
 ?>
