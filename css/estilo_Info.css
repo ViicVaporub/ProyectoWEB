@@ -1,0 +1,28 @@
+.contenedor{
+    width: 60%;
+    margin-left: 30px;
+    padding: 20px;
+}
+
+.boton-item{
+    background-color: #343a40;
+    color: white;
+    padding: 12px;
+    border-bottom: 1px solid white;
+}
+
+.pregunta1{
+    margin-left: 20px;
+}
+.contenido-item{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    overflow: hidden;
+    max-height: 0px;
+}
+
+.active + .contenido-item{
+    max-height: 100px;
+    opacity: 1;
+}

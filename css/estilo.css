@@ -70,10 +70,7 @@ footer h4{
 .piedepag li p a:hover{
     text-transform:uppercase;
 }
-.faq{
-    background-image: url(../images/fmario.jpg );
-    background-size: auto;
-}
+
 
 .redes{
     display: flex;
@@ -85,17 +82,6 @@ footer h4{
     color: white;
 }
 
-.faql{
-    color: black;
-    font-size: 30px;
-    
-    
-}
-.chikito{
-    display: flex;
-    justify-content: space-around;
-    font-size: 12px;
-}
 .susc{
     background-color: #323232;
     color: white;
