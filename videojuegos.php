@@ -9,9 +9,6 @@ $conexion = new mysqli($servidor,$cuenta,$password,$bd);
 
 $sql = 'select * from productos';
 $resultado = $conexion -> query($sql);
-$resultado2 = $conexion -> query($sql);
-$resultado3 = $conexion -> query($sql);
-
 
 ?>
 <!DOCTYPE html>
@@ -40,122 +37,22 @@ $resultado3 = $conexion -> query($sql);
     <div>
       
        <img src="images/Anuncio.jpg"  style="width:100%; height: 200px;" alt="">
-        <table class="tabla_tienda">
-            <tr class="imagenes">
-                <th><img  class="imghover" src="images/productos/SSBU.jpg" alt="" width="80%" height="70%"></th>
-                <th><img  class="imghover" src="images/productos/GTAV.jpg" width="80%" height="70%" alt=""></th>
-                <th><img  class="imghover" src="images/productos/codmw.jpg" alt="" width="80%" height="70%" ></th>
-                <th><img  class="imghover" src="images/productos/Halo5.jpg" alt="" width="80%" height="70%"></th>
-                <th><img  class="imghover" src="images/productos/overwatch.jpg" alt="" width="80%" height="70%"></th>
+        <table class="tablita">
+           <?php
+            while($fila = $resultado -> fetch_assoc()){
+                $imagen = $fila['imagen'];
+                $nombre = $fila['nombre'];
+                $precio = $fila['precio'];
+            ?>
+            <tr>
+                <th class="imagen"><img class="imgenhover" src="images/productos/<?php echo $imagen; ?>" alt="" width="70%" height="80%"></th>
+                <th class="nombre"> <?php echo $nombre; ?> </th>
+                <th class="precio"> <?php echo $precio; ?> </th>
+                <th class="botonf"><input class="boton" type="submit" value="Añadir al carrito"><img class="carrito" src="images/carrito.jpg" alt=""></th>
             </tr>
-            <tr class="nombre">
-               <?php
-                    $fila = $resultado -> fetch_assoc();
-                    $nombre = $fila ['nombre']
-                    ?><th><?php echo $nombre; ?></th><?php
-                    $fila = $resultado -> fetch_assoc();
-                    $nombre = $fila ['nombre']
-                    ?><th><?php echo $nombre; ?></th><?php
-                    $fila = $resultado -> fetch_assoc();
-                    $nombre = $fila ['nombre']
-                    ?><th><?php echo $nombre; ?></th><?php
-                    $fila = $resultado -> fetch_assoc();
-                    $nombre = $fila ['nombre']
-                    ?><th><?php echo $nombre; ?></th><?php
-                    $fila = $resultado -> fetch_assoc();
-                    $nombre = $fila ['nombre']
-                    ?><th><?php echo $nombre; ?></th><?php
-                ?>
-            </tr>
-      
-            <tr class="precio">
-                <?php
-                    $fila = $resultado -> fetch_assoc();
-                    $precio = $fila ['precio']
-                    ?><th><?php echo $precio; ?></th><?php
-                    $fila = $resultado -> fetch_assoc();
-                    $precio = $fila ['precio']
-                    ?><th><?php echo $precio; ?></th><?php
-                    $fila = $resultado -> fetch_assoc();
-                    $precio = $fila ['precio']
-                    ?><th><?php echo $precio; ?></th><?php
-                    $fila = $resultado -> fetch_assoc();
-                    $precio = $fila ['precio']
-                    ?><th><?php echo $precio; ?></th><?php
-                    $fila = $resultado -> fetch_assoc();
-                    $precio = $fila ['precio']
-                    ?><th><?php echo $precio; ?></th><?php
-                ?>
-            </tr>
-            <tr class="carrito">
-                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
-                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
-                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
-                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
-                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
-            </tr>
-            <tr class="imagenes">
-                <th><img  class="imghover" src="images/productos/Spiderman.jpg" alt="" width="80%" height="70%"></th>
-                <th><img  class="imghover" src="images/productos/Fifa21.jpg" width="80%" height="70%" alt=""></th>
-                <th><img  class="imghover" src="images/productos/Cyberpunk.jpg" alt="" width="80%" height="70%" ></th>
-                <th><img  class="imghover" src="images/productos/Gears%205.jpg" alt="" width="80%" height="70%"></th>
-                <th><img  class="imghover" src="images/productos/ACV.jpg" alt="" width="80%" height="70%"></th> 
-            </tr>
-            <tr class="nombre">
-                <?php
-                    $fila = $resultado2 -> fetch_assoc();
-                    $fila = $resultado2 -> fetch_assoc();
-                    $fila = $resultado2 -> fetch_assoc();
-                    $fila = $resultado2 -> fetch_assoc();
-                    $fila = $resultado2 -> fetch_assoc();
-                    $fila = $resultado2 -> fetch_assoc();
-                    $nombre = $fila ['nombre']
-                    ?><th><?php echo $nombre; ?></th><?php
-                    $fila = $resultado2 -> fetch_assoc();
-                    $nombre = $fila ['nombre']
-                    ?><th><?php echo $nombre; ?></th><?php
-                    $fila = $resultado2 -> fetch_assoc();
-                    $nombre = $fila ['nombre']
-                    ?><th><?php echo $nombre; ?></th><?php
-                    $fila = $resultado2 -> fetch_assoc();
-                    $nombre = $fila ['nombre']
-                    ?><th><?php echo $nombre; ?></th><?php
-                    $fila = $resultado2 -> fetch_assoc();
-                    $nombre = $fila ['nombre']
-                    ?><th><?php echo $nombre; ?></th><?php
-                ?>
-            </tr>
-            <tr class="precio">
             <?php
-                    $fila = $resultado3 -> fetch_assoc();
-                    $fila = $resultado3 -> fetch_assoc();
-                    $fila = $resultado3 -> fetch_assoc();
-                    $fila = $resultado3 -> fetch_assoc();
-                    $fila = $resultado3 -> fetch_assoc();
-                    $fila = $resultado3 -> fetch_assoc();
-                    $precio = $fila ['precio']
-                    ?><th><?php echo $precio; ?></th><?php
-                    $fila = $resultado3 -> fetch_assoc();
-                    $precio = $fila ['precio']
-                    ?><th><?php echo $precio; ?></th><?php
-                    $fila = $resultado3 -> fetch_assoc();
-                    $precio = $fila ['precio']
-                    ?><th><?php echo $precio; ?></th><?php
-                    $fila = $resultado3 -> fetch_assoc();
-                    $precio = $fila ['precio']
-                    ?><th><?php echo $precio; ?></th><?php
-                    $fila = $resultado3 -> fetch_assoc();
-                    $precio = $fila ['precio']
-                    ?><th><?php echo $precio; ?></th><?php
-                ?>
-            </tr>
-            <tr class="carrito">
-                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
-                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
-                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
-                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
-                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
-            </tr>
+            }
+            ?>    
         </table>
     </div>
               
