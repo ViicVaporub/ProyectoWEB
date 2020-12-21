@@ -16,18 +16,30 @@ session_start();
 
         while($fila = $resultado -> fetch_assoc()){
             $User = $fila['Usuario'];
-            if($usuario == $User){
+            if(isset($_COOKIE["block".$usuario])){
+                header("Location: FormularioBloqueado.php");
+            }else{
+                if($usuario == $User){
                 $passwd = $fila['Contrasena'];
                 if(password_verify($contra, $passwd)){
                     session_start();
                     $_SESSION["usuario"] = "$usuario";
                     header("Location: home.php");
                 }else{
-                    
+                    if(isset($_COOKIE["$usuario"])){
+                        $cont = $_COOKIE["$usuario"];
+                        $cont++;
+                        setcookie($usuario,$cont,time() + 120);
+                        if($cont >=3){
+                            setcookie("block".$usuario,$cont,time()+60);
+                        }
+                    }else{
+                        setcookie($usuario,1,time()+120);
+                    } header("Location: FormularioError.php");
                 }
-            }else{
-                
             }
+        }      
+            
         }
 
         
