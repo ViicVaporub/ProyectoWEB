@@ -25,11 +25,11 @@
        <img src="images/Anuncio.jpg"  style="width:100%; height: 200px;" alt="">
         <table class="tabla_tienda">
             <tr class="imagenes">
-                <th><img  class="imghover" src="images/Redragon.jpg" alt="" width="80%" height="70%"></th>
-                <th><img  class="imghover" src="images/Teclado.jpg" width="80%" height="70%" alt=""></th>
-                <th><img  class="imghover" src="images/cascos.jpg" alt="" width="80%" height="70%" ></th>
-                <th><img  class="imghover" src="images/silla.jpg" alt="" width="80%" height="70%"></th>
-                <th><img  class="imghover" src="images/control.jpg" alt="" width="80%" height="70%"></th>
+                <th><img  class="imghover" src="images/productos/Redragon.jpg" alt="" width="80%" height="70%"></th>
+                <th><img  class="imghover" src="images/productos/Teclado.jpg" width="80%" height="70%" alt=""></th>
+                <th><img  class="imghover" src="images/productos/cascos.jpg" alt="" width="80%" height="70%" ></th>
+                <th><img  class="imghover" src="images/productos/silla.jpg" alt="" width="80%" height="70%"></th>
+                <th><img  class="imghover" src="images/productos/control.jpg" alt="" width="80%" height="70%"></th>
             </tr>
             <tr class="nombre">
                 <th>Kit Mouse Gamer Redragon Centrophorus C/ Mousepad M601-ba</th>
