@@ -1,8 +1,8 @@
 <div class="redes">
                 <ul>
-                    <li><a href="https://www.facebook.com/Citibanamex/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
-                    <li><a href="https://twitter.com/contactocitibmx?lang=es" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
-                    <li><a href="https://mx.linkedin.com/company/citibanamex" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://www.facebook.com/GGisci-102707451744364" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="https://twitter.com/GisciG" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="https://www.instagram.com/ggisci.online/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                     <li><a href="https://www.youtube.com/user/banamexoficial" target="_blank"><i class="fab fa-youtube"></i></a></li>
                 </ul>
                  
