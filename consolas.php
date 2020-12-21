@@ -49,11 +49,11 @@
                 <th>$5999</th>
             </tr>
             <tr class="carrito">
-                <th><input class="boton" type="submit" value="Añadir al carrito"></th>
-                <th><input class="boton" type="submit" value="Añadir al carrito"></th>
-                <th><input class="boton" type="submit" value="Añadir al carrito"></th>
-                <th><input class="boton" type="submit" value="Añadir al carrito"></th>
-                <th><input class="boton" type="submit" value="Añadir al carrito"></th>
+                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
+                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
+                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
+                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
+                <th><input class="boton" type="submit" value="Añadir al carrito"><img src="images/Carritotienda.jpg" alt=""></th>
             </tr>
         </table>
     </div>
