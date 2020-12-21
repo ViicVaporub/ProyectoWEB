@@ -1,42 +1,36 @@
 <?php
 
-$usuario = $_POST["usuario"];
-$palabra_secreta = $_POST["palabra_secreta"];
+$servidor = "localhost"; 
+$nombreusuario = "u458624775_RISVB";
+$password = "Patas_123";
+$bd = "u458624775_Productos";
 
- 
-$file=fopen("archivo.txt", "r");
-$band=0; //para saber si la cuenta y contrasena estan en el archivo
-while(!feof($file)){
-    $linea=fgets($file);
-    if ($linea != ""){
-      $aux=preg_split("/[\s,]+/",$linea);   
-                                            
-      $user = $aux[0];
-      $contrasena = $aux[1];
-      echo $user . " " . $contrasena . "<br>";
-      if ($user===$usuario && $contrasena === $palabra_secreta){            
-            $band=1; break;
-     }
-    }
-}   
-fclose($file);
+$conexion =  mysqli_connect($servidor, $nombreusuario, $password, $bd);
 
-if ($band==1){
-     
-    session_start();
-    $micarrito=[];
+session_start();
 
-    $_SESSION["usuario"] = $usuario;
-    $_SESSION["examen"] = 0;
-    $_SESSION["admin"]=0;
-    
-    if($usuario == "admin"){
-        $_SESSION["admin"] = 1;
-    }
-    header("Location: index.php");
-    }else{
-    
-       header("Location: errorsesion.php");
-    }
- 
+        $usuario = $_POST["usuario"];
+        $contra = $_POST["Contraseña"];
+        $sql = 'SELECT * FROM Usuario';
+        $resultado = $conexion -> query($sql);
+
+        while($fila = $resultado -> fetch_assoc()){
+            $User = $fila['Usuario'];
+            if($usuario == $User){
+                $passwd = $fila['Contrasena'];
+                if(password_verify($contra, $passwd)){
+                    session_start();
+                    $_SESSION["usuario"] = "$usuario";
+                    header("Location: home.php");
+                }else{
+                    
+                }
+            }else{
+                
+            }
+        }
+
+        
+
+
 ?>

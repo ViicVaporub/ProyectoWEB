@@ -6,5 +6,5 @@ $_SESSION['usuario']="";
 session_destroy();
 
 
-header("Location: inicio.php");
+header("Location: home.php");
 ?>
