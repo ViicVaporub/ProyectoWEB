@@ -28,11 +28,11 @@
 
 
 
-                <th><img  class="imghover" src="images/xboxone.jpg" alt="" width="80%" height="70%"></th>
-                <th><img  class="imghover" src="images/play4.jpg" width="80%" height="70%" alt=""></th>
-                <th><img  class="imghover" src="images/series.jpg" alt="" width="80%" height="70%" ></th>
-                <th><img  class="imghover" src="images/play5.jpg" alt="" width="80%" height="70%"></th>
-                <th><img  class="imghover" src="images/nintendo.jpg" alt="" width="80%" height="70%"></th>
+                <th><img  class="imghover" src="images/productos/xboxone.jpg" alt="" width="80%" height="70%"></th>
+                <th><img  class="imghover" src="images/productos/play4.jpg" width="80%" height="70%" alt=""></th>
+                <th><img  class="imghover" src="images/productos/series.jpg" alt="" width="80%" height="70%" ></th>
+                <th><img  class="imghover" src="images/productos/play5.jpg" alt="" width="80%" height="70%"></th>
+                <th><img  class="imghover" src="images/productos/nintendo.jpg" alt="" width="80%" height="70%"></th>
 
             </tr>
             <tr class="nombre">
