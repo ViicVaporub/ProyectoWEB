@@ -1,17 +1,11 @@
-
-
-function comprobarclave() {
-    var clave1, calve2;
+function comprobarclave () {
+    var c1,c2;
+    c1 = document.getElementById('contra1')
+    c2 = document.getElementById('contra2')
+    if(c1 != c2){
+        alert("Las contraseñas no coinciden")
+        return false;
+    }
+        return true;
     
-    clave1 = document.getElementById("contra1").value;
-    clave2 = document.getElementById("contra2").value;
-
-if(clave1==clave2) {
-    alert("Las dos claves son iguales");
-    return true;
-}else{
-    alert("las claves no coinciden");
-    return false;
-}
-
 }
