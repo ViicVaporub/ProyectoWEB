@@ -22,6 +22,7 @@
     </header>
     
     <div>
+       <img src="images/Anuncio.jpg"  style="width:100%; height: 200px;" alt="">
         <table class="tabla_tienda">
             <tr class="imagenes">
 

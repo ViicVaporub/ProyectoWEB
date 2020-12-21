@@ -22,6 +22,7 @@
     </header>
     
     <div>
+       <img src="images/Anuncio.jpg"  style="width:100%; height: 200px;" alt="">
         <table class="tabla_tienda">
             <tr class="imagenes">
                 <th><img  class="imghover" src="images/SSBU.jpg" alt="" width="80%" height="70%"></th>
@@ -31,8 +32,8 @@
                 <th><img  class="imghover" src="images/overwatch.jpg" alt="" width="80%" height="70%"></th>
             </tr>
             <tr class="nombre">
-                <th>Super Smash Bros</th>
-                <th>GTA V</th>
+                <th>Super Smash Bros Ultimate</th>
+                <th>Grand Theft Auto V</th>
                 <th>Call of Duty Modern Warfare</th>
                 <th>Halo 5</th>
                 <th>Overwatch</th>
@@ -59,11 +60,11 @@
                 <th><img  class="imghover" src="images/ACV.jpg" alt="" width="80%" height="70%"></th> 
             </tr>
             <tr class="nombre">
-                <th>Spider Man</th>
+                <th>Spider Man Miles Morales</th>
                 <th>Fifa 21</th>
-                <th>Cyberpunk</th>
+                <th>Cyberpunk 2077</th>
                 <th>Gears of war 5</th>
-                <th>Assasins</th>
+                <th>Assassin's Creed Valhalla</th>
             </tr>
             <tr class="precio">
                 <th>$1199</th>
