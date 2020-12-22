@@ -86,12 +86,12 @@
             for($i=0;$i<count($arregloc);$i++){
         ?>
         <tr>
-            <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $arreglo[$i]['Imagen']; ?>" alt="" width="60%" height="90%"></th>
+            <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $arregloc[$i]['Imagen']; ?>" alt="" width="60%" height="90%"></th>
             <th class="imagen" style="text-align: center; height: 150px;"><?php echo $arregloc[$i]['Nombre'] ?></th>
             <th class="imagen" style="text-align: center; height: 150px;">Mex$ <?php echo $arregloc[$i]['Precio'] ?></th>
             <th class="imagen" style="text-align: center; height: 150px;"><input type="text" value="<?php echo $arregloc[$i]['Cantidad'] ?>"></th>
-            <th class="imagen" style="text-align: center; height: 150px;">Subtotal: <?php echo $arreglo[ $i]['Precio']*$arreglo[$i]['Cantidad'] ?></th>
-            <td><a href="#" class=" btnEliminar" data-id="<?php echo $arregloc[$i]['Id'] ?>">X</a></td>
+            <th class="imagen" style="text-align: center; height: 150px;">Subtotal: <?php echo $arregloc[$i]['Precio']*$arregloc[$i]['Cantidad'] ?></th>
+            <th><a href="#" class=" btnEliminar" id="<?php echo $arregloc[$i]['Id'] ?>">X</a></th>
         </tr>
         <?php
         } }
@@ -110,30 +110,24 @@
         <?php include_once('footer.php');?>
     </footer>
     
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery-ui.js" ></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-
+    <script type="text/javascript" src="assets/js/jquery1.11/jquery-1.11.0.min.js"></script>
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+    <script src="js/eliminaCarro.js"></script>
     <script>
         $(document).ready(function(){
-           $(".btnEliminar").click(function(event){
-               event.preventDefault();
-               var id=$(this).data('id');
+           $(".btnEliminar").click(function(){
+               var id=$this.id;
                var boton = $(this);   
                $.ajax({
-                   method:'POST',
-                   url:'./php/eliminarCarrito.php',
+                   url:'eliminarCarrito.php',
+                   type:'POST',
                    data:{
-                    id:id
+                    $id:$this.id;
                    }
-               }).done(function(respuesta){
-                alert(respuesta);
-                boton.parent('td').parent('tr').remove();
+               }).done(function(){
+                boton.parent('th').parent('tr').remove();
                });
            });
         });
