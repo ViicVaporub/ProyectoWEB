@@ -28,9 +28,7 @@
 
         $sql = 'select * from carrito';
         if(isset($_SESSION['carrito'])){
-        echo "Sesion ya iniciada";
         }else{
-        echo "Creo una sesion";
         if(isset($_GET['id'])){
          $resultado=$conexion->query('select * from productos where id='.$_GET['id'])or die($conexion->error); 
          $fila = mysqli_fetch_row($resultado); 
@@ -52,19 +50,15 @@
    
     <table style="width: 100%; margin-top: 10px; table-layout: fixed;">
        <?php 
-        echo "si entro aqui 1";
         if(isset($_SESSION['carrito'])){
-            echo "si entro aqui 2";
             $arregloc= $_SESSION['carrito'];
             for($i=0;$i<count($arregloc);$i++){
-                echo "si entro aqui 3";
         ?>
         <tr>
-            <th class="imagen" style="text-align: center; height: 150px;">Imagen</th>
-            <th class="imagen" style="text-align: center; height: 150px;">Nombre</th>
-            <th class="imagen" style="text-align: center; height: 150px;">Precio</th>
-            <th class="imagen" style="text-align: center; height: 150px;">Cantidad</th>
-            <th class="imagen" style="text-align: center; height: 150px;">Salir</th>
+            <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $arreglo[$i]['Imagen']; ?>.jpg" alt="" width="60%" height="90%"></th>
+            <th class="imagen" style="text-align: center; height: 150px;"><?php echo $arregloc[$i]['Nombre'] ?></th>
+            <th class="imagen" style="text-align: center; height: 150px;"><?php echo $arregloc[$i]['Precio'] ?></th>
+            <th class="imagen" style="text-align: center; height: 150px;"><input type="text" value="<?php echo $arregloc[$i]['Cantidad'] ?>"></th>
             <th class="botonf" style="text-align: center; height: 150px;"><input class="boton" type="submit" value="Eliminar del carrito"><img class="carrito" src="images/carrito.jpg" alt=""></th>
         </tr>
         <?php
