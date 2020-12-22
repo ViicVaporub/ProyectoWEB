@@ -35,7 +35,7 @@
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                   <li class="nav-item active">
-                    <a class="nav-link" href="home.php" style="margin-left: 180px;">INICIO <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="home.php" style="margin-left: 150px;">INICIO <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item dropdown" style="margin-left: 40px;">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -56,7 +56,7 @@
                   <li class="nav-item" style="margin-left: 40px;">
                     <a class="nav-link" href="Acercade.php">ACERCA DE</a>
                   </li>
-                  <li class="nav-item" style="margin-left: 140px; margin-top: 4px;"> 
+                  <li class="nav-item" style="margin-left: 120px; margin-top: 4px;"> 
                   <form action="enviarsus.php" method="post">
                     <input class="susc" type="email" placeholder="Direccion Email" name="mail" id="mail" required> <button class="butsus" type="submit" > Suscribete Ahora</button>
                   </form>

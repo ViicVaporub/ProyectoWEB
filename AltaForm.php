@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Gisci</title>
     <link rel="stylesheet" href="css/estilo.css"> 
-    <link rel="stylesheet" href="css/estilo_registro.css">      
+    <link rel="stylesheet" href="css/estilo_registro.css"> 
+    <link rel="stylesheet" href="css/modificar.css">     
     <!-- Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Google fonts -->
@@ -24,12 +25,12 @@
         <?php include_once('encabezado.php');?>
 </header>
 
-     <img src="images/Anuncio3.jpg"  style="width:100%;" alt="">
+     <img src="images/banneradmin.jpg"  style="width:100%;" alt="">
         <br><br>
-        <h1 style="font-family: monospace;" class="form-group text-center">¡Bienvenido!</h1>
+        <h1 style="font-family: monospace;" class="form-group text-center">¡Bienvenido Administrador!</h1>
         <div class="form-group text-center">
            <form role="form" action="AltaProducto.php" method="post">
-            <ul class="wrapper">
+            <ul class="wrapper form-group text-center" style="padding-left: 200px;">
                 <li class="form-row">
                 <label for="id">ID</label>
                 <input type="number" name="id" id="id">
@@ -58,7 +59,7 @@
                 <button type="submit" name="mod">Subir</button>
                 </li>
             </ul>
-          </form>
+       </form>
             
 
             

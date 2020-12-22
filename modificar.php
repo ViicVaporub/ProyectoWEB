@@ -19,6 +19,8 @@
    <header>
        <?php include_once('encabezado.php');?>
    </header>
+        <img src="images/banneradmin.jpg"  style="width:100%;" alt="">
+
     
     <?php     
     $servidor='localhost';
