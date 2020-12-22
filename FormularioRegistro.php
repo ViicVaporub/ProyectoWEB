@@ -22,37 +22,34 @@
         <?php include_once('encabezado.php');?>
 </header>
 
-     
-      <h1 class="form-group text-center">Inicia sesión</h1>
-                       <hr><hr>
-
-
+     <img src="images/Anuncio3.jpg"  style="width:100%;" alt="">
+        <br><br>
+        <h1 style="font-family: monospace;" class="form-group text-center">¡Bienvenido!</h1>
         <div class="form-group text-center">
             
 
             <form role="form" action="login.php" method="post">
 
-                <h3>USUARIO:</h3>
-
-                <input name="usuario" id="emailInput" placeholder="Usuario" type="text" required="">
+                <input style="border-top:none;border-left:none;border-right:none;border-bottom-color:black;color:black; background-color:#b7b7b7; width:300px; height:30%; padding:10px;" name="usuario" id="emailInput" placeholder="Usuario" type="text" required="">
                 <!-- <input name="usuario" type="text" placeholder="Escribe tu nombre de usuario"> -->
-                <br>
-                <h3>CONTRASEÑA:</h3>
-                <input name="Contraseña" id="passwordInput" placeholder="Contraseña" type="password" required="">
+                <br><br>
+                <input style="border-top:none;border-left:none;border-right:none;border-bottom-color:black;color:black; background-color:#b7b7b7; width:300px; height:30%; padding:10px;" name="Contraseña" id="passwordInput" placeholder="Contraseña" type="password" required="">
                 <input type="hidden" name="array" value='<?php echo serialize($cuentas); ?>'>
                 <br><br>
-                <hr>
-                <input type="submit" value="Iniciar sesión"><br>
+                <input style="color:white;border:1px solid black; padding:10px; background-color:#343a40;" href="#" data-toggle="modal" data-target="#modalPassword" type="submit" value="Iniciar sesión"><br>
                 <div class="form-group text-center">
-    <center>
-    <h2>Elige tu país:</h2>
-        <a href="cookie2.php?pais=mx"><img src="images/mx.png" width="200px" height="100px" /></a>
-        <a href="cookie2.php?pais=us"><img src="images/us.png" width="200px" height="100px"/></a>
-        <a href="cookie2.php?pais=fr"><img src="images/fr.png" width="200px" height="100px"/></a>
+                <hr>
+    <center style="background-color:#343a40">
+    <br>
+    <p style="font-size:30px;color:white;">Selecciona tu pais: </p>
+        <a href="cookie2.php?pais=mx"><img class="bandera" src="images/mx.png" width="200px" height="100px" /></a>
+        <a href="cookie2.php?pais=us"><img class="bandera" src="images/us.png" width="200px" height="100px"/></a>
+        <a href="cookie2.php?pais=fr"><img class="bandera" src="images/fr.png" width="200px" height="100px"/></a>
+        <br><br><br><br>
     </center>
                                    <hr><hr>
-                    <h4>Crear una cuenta</h4>
-                    <small><a href="#" data-toggle="modal" data-target="#modalPassword">REGISTRARME</a></small>
+                    <p style="font-size:30px;">Crear una cuenta</p>
+                    <a style="color:white;border:1px solid black; padding:10px; background-color:#343a40;" href="#" data-toggle="modal" data-target="#modalPassword">REGISTRARME</a>
                 </div>
             </form>
             <div id="modalPassword" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
