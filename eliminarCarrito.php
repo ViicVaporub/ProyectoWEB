@@ -9,7 +9,7 @@ for($i=0;$i<count($arreglo);$i++){
             'Precio' => $arreglo[$i]['Precio'],
             'Imagen' => $arreglo[$i]['Imagen'],
             'Cantidad' => $arreglo[$i]['Cantidad']
-        )
+        );
     }
 }
 if(isset($arreglonuevo)){
@@ -17,5 +17,4 @@ if(isset($arreglonuevo)){
 }else{
     unset($_SESSION['carrito']);
 }
-echo "listo";
 ?>

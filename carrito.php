@@ -119,7 +119,7 @@
            $(".Eliminarb").click(function(event){
                event.preventDefault();
                var id=$(this).data('id');
-            var boton = $(this);   
+               var boton = $(this);   
                $.ajax({
                    method: 'POST',
                    url:'eliminarCarrito.php',
