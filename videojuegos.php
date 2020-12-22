@@ -56,9 +56,7 @@ $resultado = $conexion -> query($sql);
                 <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $imagen; ?>.jpg" alt="" width="60%" height="90%"></th>
                 <th class="nombre" style="text-align: center; height: 150px;"> <?php echo $nombre ?></th>
                 <th class="precio" style="text-align: center; height: 150px;"> Mex$ <?php echo $precio ?> </th>
-                <form  role="form" action="carrito.php" method="get">
-                <th class="botonf" style="text-align: center; height: 150px;"><input class="boton" type="submit" value="Añadir al carrito"><img class="carrito" src="images/carrito.jpg" alt=""></th>
-                </form>
+                <a href="carrito.php" id="<?php echo $id ?>">Añadir al carrito</a>
             </tr>
             <?php
             }}
