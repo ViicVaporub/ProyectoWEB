@@ -22,9 +22,9 @@ session_start();
                 if($usuario == $User){
                 $passwd = $fila['Contrasena'];
                 if(password_verify($contra, $passwd)){
-                    session_start();
-                    $_SESSION["usuario"] = "$usuario";
-                    header("Location: home.php");
+                        session_start();
+                        $_SESSION["usuario"] = "$usuario";
+                        header("Location: home.php");
                 }else{
                     if(isset($_COOKIE["$usuario"])){
                         $cont = $_COOKIE["$usuario"];
