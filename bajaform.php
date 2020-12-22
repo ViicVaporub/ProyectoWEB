@@ -26,39 +26,19 @@
 
      <img src="images/Anuncio3.jpg"  style="width:100%;" alt="">
         <br><br>
-        <h1 style="font-family: monospace;" class="form-group text-center">¡Bienvenido!</h1>
+        <h1 style="font-family: monospace;" class="form-group text-center">¡Bienvenido Administrador!</h1>
         <div class="form-group text-center">
-           <form role="form" action="AltaProducto.php" method="post">
+           <form role="form" action="BajaProducto.php" method="post">
             <ul class="wrapper">
                 <li class="form-row">
-                <label for="id">ID</label>
+                <label for="id">INGRESA ID A BORRAR: </label>
                 <input type="number" name="id" id="id">
                 </li>
-                <li class="form-row">
-                <label for="producto">PRODUCTO</label>
-                <input type="text" id="producto" name="producto">
-                </li>
-                <li class="form-row">
-                <label for="imagen">IMAGEN</label>
-                <input type="text" id="imagen" name="imagen">
-                </li>
-                <li class="form-row">
-                <label for="precio">PRECIO</label>
-                <input type="number" id="precio" name="precio">
-                </li>
-                <li class="form-row">
-                <label for="existencias">EXISTENCIAS</label>
-                <input type="number" id="existencias" name="existencias">
-                </li>
-                <li class="form-row">
-                <label for="tipo">TIPO</label>
-                <input type="text" id="tipo" name="tipo">
-                </li>
-                <li class="form-row">
+                 <li class="form-row">
                 <button type="submit" name="mod">Subir</button>
                 </li>
             </ul>
-          </form>
+           </form>
             
 
             
