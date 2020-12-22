@@ -66,7 +66,12 @@
                     <span>
                         <?php 
                          if(isset($_SESSION['carrito'])){
-                             echo count($_SESSION['carrito']);
+                             $conteo;
+                             $arregloi= $_SESSION['carrito'];
+                                for($i=0;$i<count($arregloi);$i++){
+                                    $conteo+=$arregloi[$i]['Cantidad'];    
+                                }
+                             echo $conteo;
                          }else{
                              echo 0;
                          }
