@@ -14,6 +14,25 @@
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
+              <li>
+                  <?php
+                    if(isset($_SESSION["usuario"])){
+                        if($_SESSION["usuario"]== "Admin"){
+                   echo '<a class="nav-link dropdown-toggle" style="color: white;" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   TOOLBAR
+                   </a>
+                   <div  class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                     <a class="dropdown-item" href="Modifica.php">MODIFICA PRODUCTO</a>
+                     <a class="dropdown-item" href="consolas.php">BORRAR PRODUCTO</a>
+                     <a class="dropdown-item" href="Modifica.php">MODIFICA USUARIO</a>
+                     <a class="dropdown-item" href="consolas.php">BORRAR USUARIO</a>
+                   </div>
+                 </li>';
+                        }
+                    }
+                    
+                    ?>
+                    </li>
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                   <li class="nav-item active">
@@ -23,7 +42,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       PRODUCTOS
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="dropdown-menu"  aria-labelledby="navbarDropdownMenuLink">
                       <a class="dropdown-item" href="videojuegos.php">VIDEOJUEGOS</a>
                       <a class="dropdown-item" href="consolas.php">CONSOLAS</a>
                       <a class="dropdown-item" href="accesorios.php">ACCESORIOS Y COLECCIONABLES</a>
@@ -46,18 +65,7 @@
                   <li class="nav-item">
                     <a href=""><img src="images/Carritov3.png" alt="" width="35px" height="35px"></a>
                   </li>
-                  <li>
-                  <?php
-                    if(isset($_SESSION["admin"])){
-                        if($_SESSION["admin"]==1){
-                   echo '<li class="nav-item" style="margin-left: 50px;">;
-                    <a class="nav-link" href="admin.php">RESULTADOS</a>
-                  </li>';
-                        }
-                    }
-                    
-                    ?>
-                    </li>
+                
                   
                 </ul>
               </div>
