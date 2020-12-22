@@ -31,10 +31,9 @@
 
             <form  action="enviare.php" method="post">
 
-                <input  style="border-top:none;border-left:none;border-right:none;border-bottom-color:black;color:black; background-color:#b7b7b7; width:300px; height:30%; padding:10px;" name="correo" id="emailInput" placeholder="Correo Electronico" type="email" required="">
+                <input  style="border-top:none;border-left:none;border-right:none;border-bottom-color:black;color:black; background-color:#b7b7b7; width:300px; height:30%; padding:10px;" name="correo" id="correo" placeholder="Correo Electronico" type="email" required>
                 <!-- <input name="usuario" type="text" placeholder="Escribe tu nombre de usuario"> -->
                 <br><br>
-                <input type="hidden" name="array" value='<?php echo serialize($cuentas); ?>'>
                 <br><br>
                 <hr>
                 <input type="submit" value="Enviar Correo"><br>

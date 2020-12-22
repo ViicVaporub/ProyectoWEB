@@ -1,11 +1,11 @@
 <?php
 
-$mail = $_POST['mail'];
+$mail = $_POST['correo'];
 
 $destinatario = "$mail";
-$asunto= "Recuperar tu Contraseña!!";
+$asunto= "Recuperar";
 
-$relink = "<!DOCTYPE html>
+$carta = "<!DOCTYPE html>
 <html lang='en'>
 <head>
 <meta charset='UTF-8'>
@@ -28,13 +28,13 @@ $relink = "<!DOCTYPE html>
 </body>
 </html>";
 
-
 $headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+$headers .= "Content-type:text/html; charset=UTF-8" . "\r\n";
 $headers .= "From: <$destinatario>" . "\r\n";
-$headers .= "Cc: $destinatario" . "\r\n";
+$headers .= "Cc: $destinatario " . "\r\n";
 
-mail($destinatario, $asunto, $relink, $headers);
+
+mail($destinatario, $asunto, $carta, $headers);
 
 header("Location: home.php");
 ?>
