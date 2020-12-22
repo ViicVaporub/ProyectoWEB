@@ -196,12 +196,20 @@
         </tr>
         <?php
         } }
+        if(isset($_SESSION['carrito']){
         ?> 
         <th style="background-color:#b7b7b7; width:300px; height:30%; padding:10px; color:white">Total estimado</th> 
+        <?php } ?>
     </table>
+        <?php
+           if(isset($_SESSION['carrito']){
+        ?>
     <form action="pagar.php">
         <input style="color:white;border:1px solid black; padding:10px; background-color:#343a40;" type="submit" value="Realizar pago"><br>
-    </form>        
+    </form> 
+       <?php
+           }
+        ?>
     
     
     
