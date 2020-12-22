@@ -11,7 +11,7 @@ if(!$conexion){
     die("Conexion fallida: " .  mysqli_connect_error());
 }
 
-$sql = 'select * from carrito';
+ $sql = 'select * from carrito';
 
  session_start();
  include 'conexion.php';
