@@ -4,17 +4,19 @@
     table-layout: fixed;
 }
 .imagen{
-    background-color: white;
+    border-right: none;
 }
 .nombre{
     font-size: 30px;
+    font-family: serif;
 }
 .precio{
     font-size: 30px;
+    font-family: serif;
 }
 .imgenhover:hover{
-    width: 75%;
-    height: 85%;
+    width: 65%;
+    height: 95%;
 }
 .botonf{
     background-color:  #f17e1f;
@@ -30,15 +32,14 @@
     height: 80px;
     widows: 80px;
 }
-th{
-    text-align: center;
-    height: 400px;
+tr{
+    border: 10px solid #ececec;
+    border-spacing: 1px;
+    table-layout: fixed;
 }
 
 tr,th{
     text-align: center;
-    border: 10px solid #ececec;
-    border-spacing: 1px;
     table-layout: fixed;
 }
     /********FOOTER************/
