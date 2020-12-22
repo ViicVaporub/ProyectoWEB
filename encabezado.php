@@ -21,9 +21,9 @@
                    </a>
                    <div  class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                    <a class="dropdown-item" href="AltaForm.php">ALTA PRODUCTO</a>
+                   <a class="dropdown-item" href="bajaform.php">BAJA PRODUCTO</a>
                      <a class="dropdown-item" href="modificar.php">MODIFICA PRODUCTO</a>
                      <a class="dropdown-item" href="modificarusuario.php">MODIFICA USUARIO</a>
-                     <a class="dropdown-item" href="consolas.php">BORRAR USUARIO</a>
                      <a class="dropdown-item" href="grafica.php">GRAFICA</a>
                    </div>
                  </li>';
