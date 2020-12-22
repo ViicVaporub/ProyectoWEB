@@ -33,27 +33,27 @@
             <ul class="wrapper form-group text-center" style="padding-left: 200px;">
                 <li class="form-row">
                 <label for="id">ID</label>
-                <input type="number" name="id" id="id">
+                <input type="number" name="id" id="id" required>
                 </li>
                 <li class="form-row">
                 <label for="producto">PRODUCTO</label>
-                <input type="text" id="producto" name="producto">
+                <input type="text" id="producto" name="producto" required>
                 </li>
                 <li class="form-row">
                 <label for="imagen">IMAGEN</label>
-                <input type="text" id="imagen" name="imagen">
+                <input type="text" id="imagen" name="imagen" required>
                 </li>
                 <li class="form-row">
                 <label for="precio">PRECIO</label>
-                <input type="number" id="precio" name="precio">
+                <input type="number" id="precio" name="precio" required>
                 </li>
                 <li class="form-row">
                 <label for="existencias">EXISTENCIAS</label>
-                <input type="number" id="existencias" name="existencias">
+                <input type="number" id="existencias" name="existencias" required>
                 </li>
                 <li class="form-row">
                 <label for="tipo">TIPO</label>
-                <input type="text" id="tipo" name="tipo">
+                <input type="text" id="tipo" name="tipo" required>
                 </li>
                 <li class="form-row">
                 <button type="submit" name="mod">Subir</button>

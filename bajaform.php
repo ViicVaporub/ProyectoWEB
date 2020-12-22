@@ -33,7 +33,7 @@
             <ul class="wrapper">
                 <li class="form-row">
                 <label for="id">INGRESA ID A BORRAR: </label>
-                <input type="number" name="id" id="id">
+                <input type="number" name="id" id="id" required>
                 </li>
                  <li class="form-row">
                 <button type="submit" name="mod">Subir</button>
