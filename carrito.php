@@ -92,7 +92,7 @@
             <th class="imagen" style="text-align: center; height: 150px;">Mex$ <?php echo $arregloc[$i]['Precio'] ?></th>
             <th class="imagen" style="text-align: center; height: 150px;"><input type="text" value="<?php echo $arregloc[$i]['Cantidad'] ?>"></th>
             <th class="imagen" style="text-align: center; height: 150px;">Subtotal: <?php echo $arregloc[$i]['Precio']*$arregloc[$i]['Cantidad'] ?></th>
-            <th><a href="eliminarCarrito.php?id=<?php echo $arregloc[$i]['Id'] ?>" class=" btnEliminar" id="<?php echo $arregloc[$i]['Id'] ?>">X</a></th>
+            <th><a href="eliminarc.php?id=<?php echo $arregloc[$i]['Id'] ?>" class=" btnEliminar" id="<?php echo $arregloc[$i]['Id'] ?>">X</a></th>
         </tr>
         <?php
         } }
