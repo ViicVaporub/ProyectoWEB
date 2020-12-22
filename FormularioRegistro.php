@@ -62,19 +62,19 @@
                    <form role="form" action="base.php" method="post" onsubmit="return comprobarclave();">
                             <div class="modal-body">
                                 <label class="label" for="Nombre">Nombre:</label>
-                                <input type="text" name="Nombre" id="Nombre" class="registro" placeholder="Nombre"> 
+                                <input type="text" name="Nombre" id="Nombre" class="registro" placeholder="Nombre" required> 
                                 <br><br>
                                 <label class="label" for="Usuario">Usuario:</label>
-                                <input type="text" name="Usuario" id="Usuario" class="registro"> 
+                                <input type="text" name="Usuario" id="Usuario" class="registro" required> 
                                 <br><br>
                                 <label class="label" for="contra1">Contraseña:</label>
-                                <input type="password" name="Contraseña" id="contra1" class="registro"> 
+                                <input type="password" name="Contraseña" id="contra1" class="registro" required> 
                                 <br><br>
                                 <label class="label" for="contra2">Confirmacion:</label>
-                                <input type="password" name="contra " id="contra2" class="registro"> 
+                                <input type="password" name="contra " id="contra2" class="registro" required> 
                                 <br><br>
                                 <label class="label" for="Correo">Correo:</label>
-                                <input type="text" name="Correo" id="Correo" class="registro"> 
+                                <input type="text" name="Correo" id="Correo" class="registro" required> 
 
                             </div>
  
