@@ -46,10 +46,21 @@ $user = $_COOKIE['$usuario'];
                 <input name="Contraseña" id="passwordInput" placeholder="Contraseña" type="password" required="">
                 <input type="hidden" name="array" value='<?php echo serialize($cuentas); ?>'>
                 <br><br>
+                <div>
+                <h6>Ingresa el captcha:</h6>
+                <img src="captcha.php" alt=""><br><br>
+                <input required type="text" name="captchatext" id="captchatext">
+                </div>
                 <hr>
                 <input type="submit" value="Iniciar sesión"><br>
                 <h3 style="color:red">Estas <?php echo $user; ?> esta bloqueado por 1 minuto</h3>
                 <div class="form-group text-center">
+                        <center>
+                        <h2>Elige tu país:</h2>
+                            <a href="cookie2.php?pais=mx"><img src="images/mx.png" width="200px" height="100px" /></a>
+                            <a href="cookie2.php?pais=us"><img src="images/us.png" width="200px" height="100px"/></a>
+                            <a href="cookie2.php?pais=fr"><img src="images/fr.png" width="200px" height="100px"/></a>
+                        </center>
                                    <hr><hr>
 
 

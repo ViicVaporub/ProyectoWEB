@@ -14,6 +14,30 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+    $(function(){
+        $("#btn").on("click", function(){
+            var fromData = $("#formulario").serialize();
+            var ruta = "ajax.php"
+            $.ajax({
+               url: ruta,
+               type; "POST",
+               data: formData,
+                success: function(datos)
+                (
+                $("#respuesta").html(datos);
+            )
+            });
+        });
+        
+        $("#actualizar_captcha").on("click", function(){
+            document.location.reload();
+        })
+        
+        
+    });
+    </script>
 </head>
 <body>
     
@@ -34,13 +58,18 @@
 
                 <h3>USUARIO:</h3>
 
-                <input name="usuario" id="emailInput" placeholder="Usuario" type="text" required="">
+                <input  name="usuario" id="emailInput" placeholder="Usuario" type="text" required="">
                 <!-- <input name="usuario" type="text" placeholder="Escribe tu nombre de usuario"> -->
                 <br>
                 <h3>CONTRASEÑA:</h3>
                 <input name="Contraseña" id="passwordInput" placeholder="Contraseña" type="password" required="">
                 <input type="hidden" name="array" value='<?php echo serialize($cuentas); ?>'>
                 <br><br>
+                <div>
+                <h6>Ingresa el captcha:</h6>
+                <img src="captcha.php" alt=""><button id="actualizar_captcha" type="button">Actualizar</button><br><br>
+                <input required type="text" name="captchatext" id="captchatext">
+                </div>
                 <hr>
                 <input type="submit" value="Iniciar sesión"><br>
                 <div class="form-group text-center">

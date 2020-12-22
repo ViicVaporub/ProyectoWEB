@@ -47,11 +47,9 @@
                 </div>
                 <hr>
                 <input type="submit" value="Iniciar sesión"><br>
-                <h3 style="color: red;">Contraseña Incorrecta!</h3>
+                <h3 style="color: red;">Captcha Incorrecto!</h3>
                 <div class="form-group text-center">
-                                  
-                                  
-                                  <center>
+                <center>
                     <h2>Elige tu país:</h2>
                         <a href="cookie2.php?pais=mx"><img src="images/mx.png" width="200px" height="100px" /></a>
                         <a href="cookie2.php?pais=us"><img src="images/us.png" width="200px" height="100px"/></a>
