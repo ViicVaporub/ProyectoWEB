@@ -55,9 +55,17 @@
             <form role="form" action="login.php" method="post">
 
 
+
                 <h3>USUARIO:</h3>
 
                
+
+                <input style="border-top:none;border-left:none;border-right:none;border-bottom-color:black;color:black; background-color:#b7b7b7; width:300px; height:30%; padding:10px;" name="usuario" id="emailInput" placeholder="Usuario" type="text" required="">
+
+
+                <h3>USUARIO:</h3>
+
+                <input  name="usuario" id="emailInput" placeholder="Usuario" type="text" required="">
 
                 <input style="border-top:none;border-left:none;border-right:none;border-bottom-color:black;color:black; background-color:#b7b7b7; width:300px; height:30%; padding:10px;" name="usuario" id="emailInput" placeholder="Usuario" type="text" required="">
 
@@ -73,11 +81,19 @@
                 <input required type="text" name="captchatext" id="captchatext">
                 </div>
                 <hr>
+
              
 
                 <input style="color:white;border:1px solid black; padding:10px; background-color:#343a40;" href="#" data-toggle="modal" data-target="#modalPassword" type="submit" value="Iniciar sesión"><br>
 
                 <div class="form-group text-center">
+
+                <input type="submit" value="Iniciar sesión"><br>
+
+                <input style="color:white;border:1px solid black; padding:10px; background-color:#343a40;" href="#" data-toggle="modal" data-target="#modalPassword" type="submit" value="Iniciar sesión"><br>
+
+                                <div class="form-group text-center">
+
                 <hr>
     <center style="background-color:#343a40">
     <br>
