@@ -1,17 +1,13 @@
 <?php 
 
 $servidor = "localhost"; 
-$nombreusuario = "root";
-$password = "";
+$nombreusuario = "u458624775_productos";
+$password = "Breack20";
 $bd = "u458624775_productos";
 
 $conexion =  mysqli_connect($servidor, $nombreusuario, $password, $bd);
 
-if(!$conexion){
-    die("Conexion fallida: " .  mysqli_connect_error());
-}
-
-$sql = 'select * from carrito';
+$sql = 'select * from Carrito';
 $resultado = $conexion -> query($sql);
 
 ?>
@@ -55,7 +51,7 @@ $resultado = $conexion -> query($sql);
                 <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $imagen; ?>.jpg" alt="" width="60%" height="90%"></th>
                 <th class="nombre" style="text-align: center; height: 150px;"> <?php echo $consola ?></th>
                 <th class="precio" style="text-align: center; height: 150px;"> Mex$ <?php echo $precio ?> </th>
-                <th class="botonf" style="text-align: center; height: 150px;"><input class="boton" type="submit" value="Añadir al carrito"><img class="carrito" src="images/carrito.jpg" alt=""></th>
+                <th><a href="carrito.php?id=<?php echo $id ?>" >Añadir al carrito</a></th>
             </tr>
             <?php
             }}

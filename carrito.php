@@ -22,13 +22,14 @@
    
    <?php  
         $servidor = "localhost"; 
-        $nombreusuario = "root";
-        $password = "";
+        $nombreusuario = "u458624775_productos";
+        $password = "Breack20";
         $bd = "u458624775_productos";
 
         $conexion =  mysqli_connect($servidor, $nombreusuario, $password, $bd);
 
-        $sql = 'select * from carrito';
+
+        $sql = 'select * from Carrito';
         if(isset($_SESSION['carrito'])){
             if(isset($_GET['id'])){
                 $arreglo=$_SESSION['carrito'];
@@ -86,11 +87,11 @@
             for($i=0;$i<count($arregloc);$i++){
         ?>
         <tr>
-            <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $arreglo[$i]['Imagen']; ?>" alt="" width="60%" height="90%"></th>
+            <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $arregloc[$i]['Imagen']; ?>" alt="" width="60%" height="90%"></th>
             <th class="imagen" style="text-align: center; height: 150px;"><?php echo $arregloc[$i]['Nombre'] ?></th>
             <th class="imagen" style="text-align: center; height: 150px;">Mex$ <?php echo $arregloc[$i]['Precio'] ?></th>
             <th class="imagen" style="text-align: center; height: 150px;"><input type="text" value="<?php echo $arregloc[$i]['Cantidad'] ?>"></th>
-            <th class="imagen" style="text-align: center; height: 150px;">Subtotal: <?php echo $arreglo[ $i]['Precio']*$arreglo[$i]['Cantidad'] ?></th>
+            <th class="imagen" style="text-align: center; height: 150px;">Subtotal: <?php echo $arregloc[ $i]['Precio']*$arregloc[$i]['Cantidad'] ?></th>
             <td><a href="#" class=" btnEliminar" data-id="<?php echo $arregloc[$i]['Id'] ?>">X</a></td>
         </tr>
         <?php
