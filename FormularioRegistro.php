@@ -30,9 +30,7 @@
 
             <form role="form" action="login.php" method="post">
 
-                <h3>USUARIO:</h3>
-
-                <input  name="usuario" id="emailInput" placeholder="Usuario" type="text" required="">
+                <input  style="border-top:none;border-left:none;border-right:none;border-bottom-color:black;color:black; background-color:#b7b7b7; width:300px; height:30%; padding:10px;" name="usuario" id="emailInput" placeholder="Usuario" type="text" required="">
                 <!-- <input name="usuario" type="text" placeholder="Escribe tu nombre de usuario"> -->
                 <br><br>
                 <input style="border-top:none;border-left:none;border-right:none;border-bottom-color:black;color:black; background-color:#b7b7b7; width:300px; height:30%; padding:10px;" name="Contraseña" id="passwordInput" placeholder="Contraseña" type="password" required="">
