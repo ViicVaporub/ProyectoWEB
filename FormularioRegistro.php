@@ -14,30 +14,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script>
-    $(function(){
-        $("#btn").on("click", function(){
-            var fromData = $("#formulario").serialize();
-            var ruta = "ajax.php"
-            $.ajax({
-               url: ruta,
-               type; "POST",
-               data: formData,
-                success: function(datos)
-                (
-                $("#respuesta").html(datos);
-            )
-            });
-        });
-        
-        $("#actualizar_captcha").on("click", function(){
-            document.location.reload();
-        })
-        
-        
-    });
-    </script>
 </head>
 <body>
     
