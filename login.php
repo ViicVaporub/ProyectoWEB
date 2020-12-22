@@ -11,8 +11,6 @@ session_start();
 
         $usuario = $_POST["usuario"];
         $contra = $_POST["Contraseña"];
-        $captcha = sha1($_POST["captchatext"]);
-        $cookie_captcha = $_COOKIE["captcha"];
         $sql = 'SELECT * FROM Usuario';
         $resultado = $conexion -> query($sql);
 
@@ -22,7 +20,7 @@ session_start();
             if(isset($_COOKIE["block".$usuario])){
                 header("Location: FormularioBloqueado.php");
             }else{
-                if(($usuario == $User) && ($captcha == $cookie_captcha)){
+                if($usuario == $User){
                 $passwd = $fila['Contrasena'];
                 if(password_verify($contra, $passwd)){
 
@@ -46,12 +44,11 @@ session_start();
                     }else{
                         setcookie($usuario,1,time()+120);
                     }
+                        header("Location: FormularioError.php");
                     
                     
                 }
-            }else if($captcha != $cookie_captcha){
-                    header("Location: FormularioCaptcha.php");
-                }
+            }
         }      
             
         }
