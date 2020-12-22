@@ -9,6 +9,15 @@
     if ($conexion->connect_errno){
          die('Error en la conexion');
     }
+    $_SESSION["id"] = "";
+    $_SESSION["producto"] = "";
+    $_SESSION["imagen"] = "";
+    $_SESSION["precio"] = "";
+    $_SESSION["existencias"] = "";
+    $_SESSION["tipo"] = "";
+
+    $sql = 'SELECT * FROM carrito';
+
 ?>
 
 <!DOCTYPE html>
@@ -24,58 +33,67 @@
     <link rel="icon" type="image/png" href="images/gigi.png">
 </head>
 <body>
-   
+     
+      
    <header>
        <?php include_once('encabezado.php');?>
    </header>
-<?php
-    if(!empty($_POST)){
-        $alert='';
-        if(empty($_POST['id']) || empty($_POST['Nombre']) || empty($_POST['Usuario']) || empty($_POST['Correo']) || empty($_POST['Contraseña'])){
-            $alert= '<p class="msg_error">Todos los campos son obligatorios.</p>';
-        }else{
-            $id = $_POST['id'];
-            $Nombre = $_POST['Nombre'];
-            $Usuario = $_POST['Usuario'];
-            $Correo = $_POST['Correo'];
-            $Contrasena = $_POST['Contrasena'];
-            
-            $query_insert = mysqli_query($conection, "INSERT INTO usuario)(id,Nombre,Usuario,Correo,Contrasena)
-                VALUES('$id','$Nombre','$Usuario','$Correo','$Contrasena')");
-            if($query_insert){
-                $alert = '<p class="msg_save">Usuario Guardado</p>';
-            }else{
-                $alert='<p class="msg_error">Error al guardar el archivo</p>';
-            }
-        }
-        mysqli_close($conection);    
+    <form class="usuarios" action="AltaProducto.php" method='post'>
+             <?php
+    
+    if(isset($_POST['mod'])){
+        $uno = $_POST["id2"];
+        $dos = $_POST["producto2"];
+        $tres = $_POST["imagen2"];
+        $cuatro = $_POST["precio2"];
+        $cinco = $_POST["existencias2"];
+        $seis = $_POST["tipo2"];
+
+    
+    $sql = "INSERT INTO usuario(id, producto, imagen, precio, existencias, tipo) VALUES ('$uno', '$dos', '$tres', '$cuatro','$cinco','$seis')";
+    
+    if(mysqli_query($conexion,$sql) === true){
+        echo "Se creo la tabla correctamente";
+    }else{
+        echo " Error: " .$sql . "<br>" . mysqli_error($conexion);
     }
- ?>
-    <form class="usuarios" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method='post'>
+    mysqli_close($conexion);     
+          
+    header("Location: index.php");
+
+ ?>   
             <ul class="wrapper">
                 <li class="form-row">
                 <label for="id">ID</label>
-                <input type="number" name="id2" id="id" value="<?php echo $_SESSION["id"]; ?>">
+                <input type="number" name="id" id="id" value="<?php echo $_SESSION["id"]; ?>">
                 </li>
                 <li class="form-row">
-                <label for="Nombre">NOMBRE</label>
-                <input type="text" id="Nombre" name="Nombre2" value="<?php echo $_SESSION["Nombre"]; ?>">
+                <label for="producto">PRODUCTO</label>
+                <input type="text" id="producto" name="producto" value="<?php echo $_SESSION["producto"]; ?>">
                 </li>
                 <li class="form-row">
-                <label for="Usuario">USUARIO</label>
-                <input type="text" id="Usuario" name="Usuario2" value="<?php echo $_SESSION["Usuario"]; ?>">
+                <label for="imagen">IMAGEN</label>
+                <input type="text" id="imagen" name="imagen" value="<?php echo $_SESSION["imagen"]; ?>">
                 </li>
                 <li class="form-row">
-                <label for="Correo">CORREO</label>
-                <input type="text" id="Correo" name="Correo2" value="<?php echo $_SESSION["Correo"]; ?>">
+                <label for="precio">PRECIO</label>
+                <input type="number" id="precio" name="precio" value="<?php echo $_SESSION["precio"]; ?>">
                 </li>
-
                 <li class="form-row">
-                <button type="submit" name="mod">Modificar</button>
+                <label for="existencias">EXISTENCIAS</label>
+                <input type="number" id="existencias" name="existencias" value="<?php echo $_SESSION["existencias"]; ?>">
+                </li>
+                <li class="form-row">
+                <label for="tipo">TIPO</label>
+                <input type="text" id="tipo" name="tipo" value="<?php echo $_SESSION["tipo"]; ?>">
+                </li>
+                <li class="form-row">
+                <button type="submit" name="mod">SUBIR</button>
                 </li>
             </ul>
-            </form>   
-     
+            </form>
+            
+            
     <footer>
         <?php include_once('footer.php');?>
     </footer>
