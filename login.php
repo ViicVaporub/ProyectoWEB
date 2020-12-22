@@ -19,7 +19,6 @@ session_start();
 
         while($fila = $resultado -> fetch_assoc()){
             $User = $fila['Usuario'];
-            
             if(isset($_COOKIE["block".$usuario])){
                 header("Location: FormularioBloqueado.php");
             }else{
