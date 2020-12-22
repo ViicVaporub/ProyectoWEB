@@ -119,7 +119,6 @@
            $(".btnEliminar").click(function(event){
                event.preventDefault();
                var id=$(this).data('id');
-               alert(id);
                var boton = $(this);   
                $.ajax({
                    method:'POST',
