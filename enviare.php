@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $mail = $_POST['correo'];
 
 $destinatario = "$mail";
@@ -33,6 +35,7 @@ $headers .= "Content-type:text/html; charset=UTF-8" . "\r\n";
 $headers .= "From: <$destinatario>" . "\r\n";
 $headers .= "Cc: $destinatario " . "\r\n";
 
+$_SESSION['correo'] =$destinatario;
 
 mail($destinatario, $asunto, $carta, $headers);
 
