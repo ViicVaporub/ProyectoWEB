@@ -26,6 +26,7 @@
                      <a class="dropdown-item" href="consolas.php">BORRAR PRODUCTO</a>
                      <a class="dropdown-item" href="Modifica.php">MODIFICA USUARIO</a>
                      <a class="dropdown-item" href="consolas.php">BORRAR USUARIO</a>
+                     <a class="dropdown-item" href="grafica.php">GRAFICA</a>
                    </div>
                  </li>';
                         }

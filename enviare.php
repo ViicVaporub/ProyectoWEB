@@ -5,7 +5,7 @@ $mail = $_POST['mail'];
 $destinatario = "$mail";
 $asunto= "Recuperar tu Contraseña!!";
 
-$carta = "<!DOCTYPE html>
+$relink = "<!DOCTYPE html>
 <html lang='en'>
 <head>
 <meta charset='UTF-8'>
@@ -34,9 +34,7 @@ $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 $headers .= "From: <$destinatario>" . "\r\n";
 $headers .= "Cc: $destinatario" . "\r\n";
 
-mail($destinatario, $asunto, $carta, $headers);
+mail($destinatario, $asunto, $relink, $headers);
 
 header("Location: home.php");
-
-
 ?>

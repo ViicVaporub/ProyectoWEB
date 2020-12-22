@@ -40,7 +40,7 @@
                 <input type="submit" value="Iniciar sesión"><br>
                 <div class="form-group text-center">
                 <hr>
-                <a href="recuperar.php">
+                <a href="Formulariorecuperar.php">
                     <h3 style="font-size: 20px;">¿Olvidaste tu contraseña?</h3>
                 </a>
     <center style="background-color:#343a40">
