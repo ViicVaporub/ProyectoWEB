@@ -1,8 +1,8 @@
 <?php 
 
 $servidor = "localhost"; 
-$nombreusuario = "u458624775_productos";
-$password = "Breack20";
+$nombreusuario = "root";
+$password = "";
 $bd = "u458624775_productos";
 
 $conexion =  mysqli_connect($servidor, $nombreusuario, $password, $bd);
@@ -50,12 +50,15 @@ $resultado = $conexion -> query($sql);
                 $imagen = $fila['imagen'];
                 $nombre = $fila['producto'];
                 $precio = $fila['precio'];
+                $id = $fila['id'];
             ?>
             <tr>
                 <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $imagen; ?>.jpg" alt="" width="60%" height="90%"></th>
                 <th class="nombre" style="text-align: center; height: 150px;"> <?php echo $nombre ?></th>
                 <th class="precio" style="text-align: center; height: 150px;"> Mex$ <?php echo $precio ?> </th>
+                <form  role="form" action="login.php" method="post">
                 <th class="botonf" style="text-align: center; height: 150px;"><input class="boton" type="submit" value="Añadir al carrito"><img class="carrito" src="images/carrito.jpg" alt=""></th>
+                </form>
             </tr>
             <?php
             }}

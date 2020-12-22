@@ -1,8 +1,8 @@
 <?php 
 
 $servidor = "localhost"; 
-$nombreusuario = "u458624775_productos";
-$password = "Breack20";
+$nombreusuario = "root";
+$password = "";
 $bd = "u458624775_productos";
 
 $conexion =  mysqli_connect($servidor, $nombreusuario, $password, $bd);
@@ -11,7 +11,7 @@ if(!$conexion){
     die("Conexion fallida: " .  mysqli_connect_error());
 }
 
-$sql = 'select * from consolas';
+$sql = 'select * from carrito';
 $resultado = $conexion -> query($sql);
 
 ?>
@@ -48,6 +48,7 @@ $resultado = $conexion -> query($sql);
                 $imagen = $fila['imagen'];
                 $consola = $fila['producto'];
                 $precio = $fila['precio'];
+                $id = $fila['id'];
             ?>
             <tr>
                 <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $imagen; ?>.jpg" alt="" width="60%" height="90%"></th>

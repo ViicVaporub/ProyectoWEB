@@ -1,8 +1,8 @@
 <?php 
 
 $servidor = "localhost"; 
-$nombreusuario = "u458624775_productos";
-$password = "Breack20";
+$nombreusuario = "root";
+$password = "";
 $bd = "u458624775_productos";
 
 $conexion =  mysqli_connect($servidor, $nombreusuario, $password, $bd);
@@ -11,7 +11,7 @@ if(!$conexion){
     die("Conexion fallida: " .  mysqli_connect_error());
 }
 
-$sql = 'select * from articulos';
+$sql = 'select * from carrito';
 $resultado = $conexion -> query($sql);
 
 ?>
@@ -48,6 +48,7 @@ $resultado = $conexion -> query($sql);
                 $imagen = $fila['imagen'];
                 $accesorio = $fila['producto'];
                 $precio = $fila['precio'];
+                $id = $fila['id'];
             ?>
             <tr>
 
