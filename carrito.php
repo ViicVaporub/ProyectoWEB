@@ -1,5 +1,5 @@
 <?php  
-
+session_start();
 $servidor = "localhost"; 
 $nombreusuario = "root";
 $password = "";
@@ -15,8 +15,8 @@ if(!$conexion){
  if(isset($_SESSION['carrito'])){
      
  }else{
-     if(isset($_POST['id'])){
-         $resultado=$conexion->query('select * from productos where id='.$_POST['id'])or die($conexion->error); 
+     if(isset($_GET['id'])){
+         $resultado=$conexion->query('select * from productos where id='.$_GET['id'])or die($conexion->error); 
          $nombre=$fila['producto'];
          $precio=$fila['precio'];
          $imagen=$imagen['imagen'];
@@ -48,16 +48,14 @@ if(!$conexion){
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-       <!-- Llamamos al encabezado por medio de include_once -->
-        <?php include_once('encabezado.php');?>
-        
-    </header>
     <table style="width: 100%; margin-top: 10px; table-layout: fixed;">
        <?php 
+        echo "si entro aqui 1";
         if(isset($_SESSION['carrito'])){
+            echo "si entro aqui 2";
             $arregloc= $_SESSION['carrito'];
             for($i=0;$i<count($arregloc);$i++){
+                echo "si entro aqui 3";
         ?>
         <tr>
             <th class="imagen" style="text-align: center; height: 150px;">Imagen</th>
