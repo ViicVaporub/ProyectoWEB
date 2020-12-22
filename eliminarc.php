@@ -18,4 +18,5 @@ if(isset($arreglonuevo)){
 }else{
     unset($_SESSION['carrito']);
 }
+header("location:carrito.php");
 ?>
