@@ -25,16 +25,14 @@ session_start();
                 if(($usuario == $User) && ($captcha == $cookie_captcha)){
                 $passwd = $fila['Contrasena'];
                 if(password_verify($contra, $passwd)){
-<<<<<<< HEAD
                     session_start();
                     $_SESSION["usuario"] = "$usuario";
                     setcookie("captcha",'',time()-3600);
                     header("Location: home.php");
-=======
+
                         session_start();
                         $_SESSION["usuario"] = "$usuario";
                         header("Location: home.php");
->>>>>>> 3d835721ba1624c26f8e226530904f17bc14d1eb
                 }else{
                     if(isset($_COOKIE["$usuario"])){
                         $cont = $_COOKIE["$usuario"];

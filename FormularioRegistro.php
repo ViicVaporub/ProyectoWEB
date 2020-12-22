@@ -54,19 +54,16 @@
 
             <form role="form" action="login.php" method="post">
 
-<<<<<<< HEAD
                 <h3>USUARIO:</h3>
 
                 <input  name="usuario" id="emailInput" placeholder="Usuario" type="text" required="">
-=======
+
                 <input style="border-top:none;border-left:none;border-right:none;border-bottom-color:black;color:black; background-color:#b7b7b7; width:300px; height:30%; padding:10px;" name="usuario" id="emailInput" placeholder="Usuario" type="text" required="">
->>>>>>> 3d835721ba1624c26f8e226530904f17bc14d1eb
                 <!-- <input name="usuario" type="text" placeholder="Escribe tu nombre de usuario"> -->
                 <br><br>
                 <input style="border-top:none;border-left:none;border-right:none;border-bottom-color:black;color:black; background-color:#b7b7b7; width:300px; height:30%; padding:10px;" name="Contraseña" id="passwordInput" placeholder="Contraseña" type="password" required="">
                 <input type="hidden" name="array" value='<?php echo serialize($cuentas); ?>'>
                 <br><br>
-<<<<<<< HEAD
                 <div>
                 <h6>Ingresa el captcha:</h6>
                 <img src="captcha.php" alt=""><button id="actualizar_captcha" type="button">Actualizar</button><br><br>
@@ -74,10 +71,10 @@
                 </div>
                 <hr>
                 <input type="submit" value="Iniciar sesión"><br>
-=======
+
                 <input style="color:white;border:1px solid black; padding:10px; background-color:#343a40;" href="#" data-toggle="modal" data-target="#modalPassword" type="submit" value="Iniciar sesión"><br>
->>>>>>> 3d835721ba1624c26f8e226530904f17bc14d1eb
-                <div class="form-group text-center">
+
+                                <div class="form-group text-center">
                 <hr>
     <center style="background-color:#343a40">
     <br>
