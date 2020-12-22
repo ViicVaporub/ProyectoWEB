@@ -1,8 +1,30 @@
-<?php     
-$servidor = "localhost"; 
-$nombreusuario = "u458624775_productos";
-$password = "Breack20";
-$bd = "u458624775_productos";
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/modificar.css">
+  <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/gigi.png">
+    
+   
+</head>
+<body>
+   
+   <header>
+       <?php include_once('encabezado.php');?>
+   </header>
+    
+    <?php     
+    $servidor='localhost';
+    $cuenta='root';
+    $password='';
+    $bd='u458624775_productos';
 
     $_SESSION["id"] = "";
     $_SESSION["producto"] = "";
@@ -56,24 +78,6 @@ $bd = "u458624775_productos";
        
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/modificar.css">
-    
-   
-</head>
-<body>
-   
-   <header>
-       <?php include_once('encabezado.php');?>
-   </header>
     
     <div class="contenedor1">
         <div class="contenedor2">

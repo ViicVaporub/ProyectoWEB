@@ -1,8 +1,8 @@
 <?php 
 
 $servidor = "localhost"; 
-$nombreusuario = "u458624775_productos";
-$password = "Breack20";
+$nombreusuario = "root";
+$password = "";
 $bd = "u458624775_productos";
 
 $conexion =  mysqli_connect($servidor, $nombreusuario, $password, $bd);
