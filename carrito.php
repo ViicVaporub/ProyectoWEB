@@ -126,13 +126,12 @@
                var id=$(this).data('id');
                var boton = $(this);   
                $.ajax({
-                   method:'POST',
-                   url:'./php/eliminarCarrito.php',
+                   type:'POST',
+                   url:'eliminarCarrito.php',
                    data:{
                     id:id
                    }
                }).done(function(respuesta){
-                alert(respuesta);
                 boton.parent('td').parent('tr').remove();
                });
            });
