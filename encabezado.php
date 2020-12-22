@@ -1,6 +1,4 @@
 <?php 
-
-    #Iniciar sesión para usar $_SESSION
     session_start(); 
 
 ?>
@@ -22,9 +20,9 @@
                    TOOLBAR
                    </a>
                    <div  class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                     <a class="dropdown-item" href="Modifica.php">MODIFICA PRODUCTO</a>
+                     <a class="dropdown-item" href="modificar.php">MODIFICA PRODUCTO</a>
                      <a class="dropdown-item" href="consolas.php">BORRAR PRODUCTO</a>
-                     <a class="dropdown-item" href="Modifica.php">MODIFICA USUARIO</a>
+                     <a class="dropdown-item" href="modificarusuario.php">MODIFICA USUARIO</a>
                      <a class="dropdown-item" href="consolas.php">BORRAR USUARIO</a>
                      <a class="dropdown-item" href="grafica.php">GRAFICA</a>
                    </div>
@@ -37,7 +35,7 @@
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                   <li class="nav-item active">
-                    <a class="nav-link" href="home.php" style="margin-left: 300px;">INICIO <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="home.php" style="margin-left: 180px;">INICIO <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item dropdown" style="margin-left: 40px;">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -64,7 +62,17 @@
                   </form>
                   </li>
                   <li class="nav-item">
-                    <a href=""><img src="images/Carritov3.png" alt="" width="35px" height="35px"></a>
+                    <a href="carrito.php"><img src="images/Carritov3.png" alt="" width="35px" height="35px">
+                    <span>
+                        <?php 
+                         if(isset($_SESSION['carrito'])){
+                             echo count($_SESSION['carrito']);
+                         }else{
+                             echo 0;
+                         }
+                        ?>
+                    </span>
+                    </a>
                   </li>
                 
                   

@@ -4,7 +4,6 @@ $servidor = "localhost";
 $nombreusuario = "root";
 $password = "";
 $bd = "u458624775_productos";
-
 $conexion =  mysqli_connect($servidor, $nombreusuario, $password, $bd);
 
 if(!$conexion){
@@ -29,6 +28,8 @@ $resultado = $conexion -> query($sql);
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/gigi.png">
     
 </head>
 <body class="fondo">
@@ -56,9 +57,7 @@ $resultado = $conexion -> query($sql);
                 <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $imagen; ?>.jpg" alt="" width="60%" height="90%"></th>
                 <th class="nombre" style="text-align: center; height: 150px;"> <?php echo $nombre ?></th>
                 <th class="precio" style="text-align: center; height: 150px;"> Mex$ <?php echo $precio ?> </th>
-                <form  role="form" action="carrito.php" method="post">
-                <th class="botonf" style="text-align: center; height: 150px;"><input class="boton" type="submit" value="Añadir al carrito"><img class="carrito" src="images/carrito.jpg" alt=""></th>
-                </form>
+                <th><a href="carrito.php?id=<?php echo $id ?>" >Añadir al carrito</a></th>
             </tr>
             <?php
             }}
