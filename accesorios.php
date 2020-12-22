@@ -1,11 +1,15 @@
 <?php 
 
 $servidor = "localhost"; 
-$cuenta = "root";
-$password = "";
-$bd = "u458624775_Productos";
+$nombreusuario = "u458624775_productos";
+$password = "Breack20";
+$bd = "u458624775_productos";
 
-$conexion =  mysqli_connect($servidor, $cuenta, $password, $bd);
+$conexion =  mysqli_connect($servidor, $nombreusuario, $password, $bd);
+
+if(!$conexion){
+    die("Conexion fallida: " .  mysqli_connect_error());
+}
 
 $sql = 'select * from articulos';
 $resultado = $conexion -> query($sql);
