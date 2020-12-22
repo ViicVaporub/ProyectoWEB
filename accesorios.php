@@ -43,8 +43,10 @@ $resultado = $conexion -> query($sql);
         <table class="tablita">
            <?php
             while($fila = $resultado -> fetch_assoc()){
+                $tipo = $fila['tipo'];
+                if($tipo==3){
                 $imagen = $fila['imagen'];
-                $accesorio = $fila['accesorio'];
+                $accesorio = $fila['producto'];
                 $precio = $fila['precio'];
             ?>
             <tr>
@@ -57,7 +59,7 @@ $resultado = $conexion -> query($sql);
                 <th class="botonf" style="text-align: center; height: 150px;"><input class="boton" type="submit" value="Añadir al carrito"><img class="carrito" src="images/carrito.jpg" alt=""></th>
             </tr>
             <?php
-            }
+            }}
             ?>    
         </table>
     </div>
