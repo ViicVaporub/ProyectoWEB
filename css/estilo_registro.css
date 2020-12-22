@@ -1,0 +1,15 @@
+.registro{
+    width: 100%;
+    color: black;
+    padding-left: 10px;
+}
+.label{
+    margin-right: 500px;
+}
+.boton{
+    background-color: #343a40;
+    color: white;
+    border: none;
+    width: 100%;
+    height: 50px;
+}

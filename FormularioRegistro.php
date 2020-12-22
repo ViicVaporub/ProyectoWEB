@@ -8,7 +8,8 @@
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Gisci</title>
-    <link rel="stylesheet" href="css/estilo.css">    
+    <link rel="stylesheet" href="css/estilo.css"> 
+    <link rel="stylesheet" href="css/estilo_registro.css">      
     <!-- Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Google fonts -->
@@ -54,29 +55,33 @@
                     <small><a href="#" data-toggle="modal" data-target="#modalPassword">REGISTRARME</a></small>
                 </div>
             </form>
-
             <div id="modalPassword" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h3 id="n-color">Registro</h3>
-                            <button type="button" class="close font-weight-light" data-dismiss="modal" aria-hidden="true">×</button>
-                        </div>
-                   <form class="form" role="form" action="base.php" method="post" onsubmit="return comprobarclave();">
+                    <br>
+                   <form role="form" action="base.php" method="post" onsubmit="return comprobarclave();">
                             <div class="modal-body">
-
-                                <p>Nombre: <input type="text" name="Nombre" id="Nombre" style="margin-left: 14px;"> </p>
-                                <p>Usuario: <input type="text" name="Usuario" id="Usuario" style="margin-left: 14px;"> </p>
-                                <p>Contraseña: <input type="password" name="Contraseña" id="contra1" style="margin-left: 10px;"> </p>
-                                <p>Confirmacion: <input type="password" name="contra " id="contra2" style="margin-left: 10px;" placeholder="Confirmacion de contraseña" required> </p>
-                                <p>Correo: <input type="text" name="Correo" id="Correo" style="margin-left: 23px;"> </p>
+                                <label class="label" for="Nombre">Nombre:</label>
+                                <input type="text" name="Nombre" id="Nombre" class="registro" placeholder="Nombre"> 
+                                <br><br>
+                                <label class="label" for="Usuario">Usuario:</label>
+                                <input type="text" name="Usuario" id="Usuario" class="registro"> 
+                                <br><br>
+                                <label class="label" for="contra1">Contraseña:</label>
+                                <input type="password" name="Contraseña" id="contra1" class="registro"> 
+                                <br><br>
+                                <label class="label" for="contra2">Confirmacion:</label>
+                                <input type="password" name="contra " id="contra2" class="registro"> 
+                                <br><br>
+                                <label class="label" for="Correo">Correo:</label>
+                                <input type="text" name="Correo" id="Correo" class="registro"> 
 
                             </div>
-                            <div class="modal-footer">
+ 
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-primary btn-block">enviar</button>
+                                    <button class="boton" type="submit" class="btn btn-primary btn-block">Enviar</button>
                                 </div>
-                            </div>
+
                         </form>
                     </div>
                 </div>
