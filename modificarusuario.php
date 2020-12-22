@@ -1,15 +1,14 @@
-<?php     
+<?php
+     
 $servidor = "localhost"; 
 $nombreusuario = "u458624775_productos";
 $password = "Breack20";
 $bd = "u458624775_productos";
-
     $_SESSION["id"] = "";
-    $_SESSION["producto"] = "";
-    $_SESSION["imagen"] = "";
-    $_SESSION["precio"] = "";
-    $_SESSION["existencias"] = "";
-    $_SESSION["tipo"] = "";
+    $_SESSION["Nombre"] = "";
+    $_SESSION["Usuario"] = "";
+    $_SESSION["Correo"] = "";
+
 
    
     //conexion a la base de datos
@@ -26,31 +25,28 @@ $bd = "u458624775_productos";
         
         $modificar = $_POST['modificar'];
         $_SESSION["modificar2"] = $modificar;
-        $sql2 = "select * from Carrito where id='$modificar'"; //hacemos con todo el contenido de la tabla
+        $sql2 = "select * from usuario where id='$modificar'"; //hacemos con todo el contenido de la tabla
         $resultado = $conexion -> query($sql2); //aplicamos sentencia
         while( $fila = $resultado -> fetch_assoc() ){
             $_SESSION["id"] = $fila["id"];
-            $_SESSION["producto"] = $fila["producto"];
-            $_SESSION["imagen"] = $fila["imagen"];
-            $_SESSION["precio"] = $fila["precio"];
-            $_SESSION["existencias"] = $fila["existencias"];
-            $_SESSION["tipo"] = $fila["tipo"];
+            $_SESSION["Nombre"] = $fila["Nombre"];
+            $_SESSION["Usuario"] = $fila["Usuario"];
+            $_SESSION["Correo"] = $fila["Correo"];
         }
         
     }
     
     if(isset($_POST['mod'])){
         $uno = $_POST["id2"];
-        $dos = $_POST["producto2"];
-        $tres = $_POST["imagen2"];
-        $cuatro = $_POST["precio2"];
-        $cinco = $_POST["existencias2"];
-        $seis = $_POST["tipo2"];
+        $dos = $_POST["Nombre2"];
+        $tres = $_POST["Usuario2"];
+        $cuatro = $_POST["Correo2"];
+
 
 
         $modificarl = $_SESSION["modificar2"];
         
-        $ne="update Carrito set id='$uno', producto='$dos',imagen='$tres', precio='$cuatro', existencias='$cinco', tipo='$seis' WHERE id='$modificarl'";
+        $ne="update usuario set id='$uno', Nombre='$dos', Usuario='$tres', Correo='$cuatro' WHERE id='$modificarl'";
         $fin = $conexion -> query($ne);
     }
        
@@ -82,7 +78,7 @@ $bd = "u458624775_productos";
             <?php        
          //continuamos con la consulta de datos a la tabla usuarios
          //vemos datos en un tabla de html
-         $sql = 'select * from carrito';//hacemos cadena con la sentencia mysql que consulta todo el contenido de la tabla
+         $sql = 'select * from usuario';//hacemos cadena con la sentencia mysql que consulta todo el contenido de la tabla
          $resultado = $conexion -> query($sql); //aplicamos sentencia
          
          if ($resultado -> num_rows){ //si la consulta genera registros
@@ -99,15 +95,13 @@ $bd = "u458624775_productos";
                 <?php
                 $salida='<table>';
                 while( $fila = $resultado -> fetch_assoc() ){ //recorremos los registros obtenidos de la tabla
-                    echo '<option value="'.$fila["id"].'">'.$fila["producto"].'</option>';
+                    echo '<option value="'.$fila["id"].'">'.$fila["Nombre"].'</option>';
                     //proceso de concatenacion de datos
                     $salida.= '<tr>';
                     $salida.= '<td>'. $fila['id'] . '</td>';
-                    $salida.= '<td>'. $fila['producto'] . '</td>';
-                    $salida.= '<td>'. $fila['imagen'] . '</td>';
-                    $salida.= '<td>'. $fila['precio'] . '</td>';
-                    $salida.= '<td>'. $fila['existencias'] . '</td>';
-                    $salida.= '<td>'. $fila['tipo'] . '</td>';
+                    $salida.= '<td>'. $fila['Nombre'] . '</td>';
+                    $salida.= '<td>'. $fila['Usuario'] . '</td>';
+                    $salida.= '<td>'. $fila['Correo'] . '</td>';
                     $salida.= '</tr>';
                     }//fin while   
                     $salida.= '</table>';
@@ -139,25 +133,18 @@ $bd = "u458624775_productos";
                 <input type="number" name="id2" id="id" value="<?php echo $_SESSION["id"]; ?>">
                 </li>
                 <li class="form-row">
-                <label for="producto">PRODUCTO</label>
-                <input type="text" id="producto" name="producto2" value="<?php echo $_SESSION["producto"]; ?>">
+                <label for="Nombre">NOMBRE</label>
+                <input type="text" id="Nombre" name="Nombre2" value="<?php echo $_SESSION["Nombre"]; ?>">
                 </li>
                 <li class="form-row">
-                <label for="imagen">IMAGEN</label>
-                <input type="text" id="imagen" name="imagen2" value="<?php echo $_SESSION["imagen"]; ?>">
+                <label for="Usuario">USUARIO</label>
+                <input type="text" id="Usuario" name="Usuario2" value="<?php echo $_SESSION["Usuario"]; ?>">
                 </li>
                 <li class="form-row">
-                <label for="precio">PRECIO</label>
-                <input type="number" id="precio" name="precio2" value="<?php echo $_SESSION["precio"]; ?>">
+                <label for="Correo">CORREO</label>
+                <input type="text" id="Correo" name="Correo2" value="<?php echo $_SESSION["Correo"]; ?>">
                 </li>
-                <li class="form-row">
-                <label for="existencias">EXISTENCIAS</label>
-                <input type="number" id="existencias" name="existencias2" value="<?php echo $_SESSION["existencias"]; ?>">
-                </li>
-                <li class="form-row">
-                <label for="tipo">TIPO</label>
-                <input type="text" id="tipo" name="tipo2" value="<?php echo $_SESSION["tipo"]; ?>">
-                </li>
+
                 <li class="form-row">
                 <button type="submit" name="mod">Modificar</button>
                 </li>
