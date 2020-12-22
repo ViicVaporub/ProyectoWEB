@@ -17,3 +17,9 @@
     width: 205px;
     height: 105px;
 }
+.ocultar{
+    display: none;
+}
+.mostrar{
+    display: block;
+}
