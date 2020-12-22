@@ -7,7 +7,7 @@ $bd = "u458624775_Productos";
 
 $conexion =  mysqli_connect($servidor, $cuenta, $password, $bd);
 
-$sql = 'select * from productos';
+$sql = 'select * from articulos';
 $resultado = $conexion -> query($sql);
 
 ?>
@@ -40,13 +40,16 @@ $resultado = $conexion -> query($sql);
            <?php
             while($fila = $resultado -> fetch_assoc()){
                 $imagen = $fila['imagen'];
-                $nombre = $fila['nombre'];
+                $accesorio = $fila['accesorio'];
                 $precio = $fila['precio'];
             ?>
             <tr>
-                <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $imagen; ?>" alt="" width="60%" height="90%"></th>
-                <th class="nombre" style="text-align: center; height: 150px;"> <?php echo $nombre ?></th>
+
+                <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $imagen; ?>.jpg" alt="" width="60%" height="90%"></th>
+                <th class="nombre" style="text-align: center; height: 150px;"> <?php echo $accesorio ?></th>
                 <th class="precio" style="text-align: center; height: 150px;"> Mex$ <?php echo $precio ?> </th>
+                
+               
                 <th class="botonf" style="text-align: center; height: 150px;"><input class="boton" type="submit" value="Añadir al carrito"><img class="carrito" src="images/carrito.jpg" alt=""></th>
             </tr>
             <?php
