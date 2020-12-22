@@ -13,7 +13,7 @@ if(!$conexion){
 
  $sql = 'select * from carrito';
  if(isset($_SESSION['carrito'])){
-     echo "Sesion ya iniciada;"
+     echo "Sesion ya iniciada";
  }else{
      echo "Creo una sesion";
      if(isset($_GET['id'])){
@@ -22,7 +22,7 @@ if(!$conexion){
          $precio=$fila['precio'];
          $imagen=$imagen['imagen'];
          $arreglo[]=array(
-            'Id' => $_POST['id'],
+            'Id' => $_GET['id'],
             'Nombre' => $nombre,
             'Precio' => $precio, 
             'Imagen' => $imagen,
