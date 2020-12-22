@@ -182,9 +182,11 @@
    
     <table style="width: 100%; margin-top: 10px; table-layout: fixed;">
        <?php 
+        $total=0;
         if(isset($_SESSION['carrito'])){
             $arregloc= $_SESSION['carrito'];
             for($i=0;$i<count($arregloc);$i++){
+                $total+=$arregloc[$i]['Precio']*$arregloc[$i]['Cantidad'];
         ?>
         <tr>
             <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $arregloc[$i]['Imagen']; ?>" alt="" width="60%" height="90%"></th>
@@ -196,20 +198,12 @@
         </tr>
         <?php
         } }
-        if(isset($_SESSION['carrito']){
         ?> 
-        <th style="background-color:#b7b7b7; width:300px; height:30%; padding:10px; color:white">Total estimado</th> 
-        <?php } ?>
+        <th style="background-color:#343a40; width:100%; height:30%; color:white">Total estimado <?php echo $total ?></th> 
     </table>
-        <?php
-           if(isset($_SESSION['carrito']){
-        ?>
     <form action="pagar.php">
         <input style="color:white;border:1px solid black; padding:10px; background-color:#343a40;" type="submit" value="Realizar pago"><br>
     </form> 
-       <?php
-           }
-        ?>
     
     
     
