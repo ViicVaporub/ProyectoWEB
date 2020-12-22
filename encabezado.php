@@ -61,7 +61,17 @@
                   </form>
                   </li>
                   <li class="nav-item">
-                    <a href=""><img src="images/Carritov3.png" alt="" width="35px" height="35px"></a>
+                    <a href="carrito.php"><img src="images/Carritov3.png" alt="" width="35px" height="35px">
+                    <span>
+                        <?php 
+                         if(isset($_SESSION['carrito'])){
+                             echo $count($_SESSION['carrito']);
+                         }else{
+                             echo 0;
+                         }
+                        ?>
+                    </span>
+                    </a>
                   </li>
                 
                   

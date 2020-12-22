@@ -86,12 +86,12 @@
             for($i=0;$i<count($arregloc);$i++){
         ?>
         <tr>
-            <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $arreglo[$i]['Imagen']; ?>.jpg" alt="" width="60%" height="90%"></th>
+            <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $arreglo[$i]['Imagen']; ?>" alt="" width="60%" height="90%"></th>
             <th class="imagen" style="text-align: center; height: 150px;"><?php echo $arregloc[$i]['Nombre'] ?></th>
             <th class="imagen" style="text-align: center; height: 150px;">Mex$ <?php echo $arregloc[$i]['Precio'] ?></th>
             <th class="imagen" style="text-align: center; height: 150px;"><input type="text" value="<?php echo $arregloc[$i]['Cantidad'] ?>"></th>
-            <th class="imagen" style="text-align: center; height: 150px;">Subtotal: <? echo $arreglo[$i]['Precio']*$arreglo[$i]['Cantidad'] ?></th>
-            <th class="botonf" style="text-align: center; height: 150px;"><input class="boton" type="submit" value="Eliminar del carrito"><img class="carrito" src="images/carrito.jpg" alt=""></th>
+            <th class="imagen" style="text-align: center; height: 150px;">Subtotal: <?php echo $arreglo[$i]['Precio']*$arreglo[$i]['Cantidad'] ?></th>
+            <th><a href="#" class="Eliminarb" data-id="<?php echo $arregloc[$i]['Id'] ?>">X</a></th>
         </tr>
         <?php
         } }
@@ -114,5 +114,23 @@
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+    <script>
+        $(document).ready(function(){
+           $(".Eliminarb").click(function(event){
+               event.preventDefault();
+               var id=$(this).data('id');
+            var boton = $(this);   
+               $.ajax({
+                   method: 'POST',
+                   url:'eliminarCarrito.php',
+                   data:(
+                    id:id
+                   )
+               }).done(function(respuesta){
+                boton.parent('th').parent('tr').remove();
+               });
+           });
+        });
+    </script>
 </body>
 </html>
