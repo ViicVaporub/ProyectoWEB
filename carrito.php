@@ -22,13 +22,14 @@
    
    <?php  
         $servidor = "localhost"; 
-        $nombreusuario = "root";
-        $password = "";
+        $nombreusuario = "u458624775_productos";
+        $password = "Breack20";
         $bd = "u458624775_productos";
 
         $conexion =  mysqli_connect($servidor, $nombreusuario, $password, $bd);
 
-        $sql = 'select * from carrito';
+
+        $sql = 'select * from Carrito';
         if(isset($_SESSION['carrito'])){
             if(isset($_GET['id'])){
                 $arreglo=$_SESSION['carrito'];
