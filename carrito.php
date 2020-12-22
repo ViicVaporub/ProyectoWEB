@@ -121,11 +121,11 @@
                var id=$(this).data('id');
                var boton = $(this);   
                $.ajax({
-                   method: 'POST',
+                   method:'POST',
                    url:'eliminarCarrito.php',
-                   data:(
+                   data:{
                     id:id
-                   )
+                   }
                }).done(function(respuesta){
                 boton.parent('th').parent('tr').remove();
                });
