@@ -28,6 +28,35 @@
 
         $sql = 'select * from carrito';
         if(isset($_SESSION['carrito'])){
+            if(isset($_GET['id'])){
+                $arreglo=$_SESSION['carrito'];
+                $encontro=false;
+                for($i=0;$i<count($arreglo);$i++){
+                    if($arreglo[$i]['Id'] == $_GET['id']){
+                        $encontro=true;
+                        $numero=$i;
+                    }
+                }
+                if($encontro==true){
+                    $arreglo[$numero]['Cantidad']=$arreglo[$numero]['Cantidad']+1;
+                    $_SESSION['carrito']=$arreglo;
+                }else{
+                    $resultado=$conexion->query('select * from productos where id='.$_GET['id'])or die($conexion->error); 
+                    $fila = mysqli_fetch_row($resultado); 
+                    $nombre=$fila['producto'];
+                    $precio=$fila['precio'];
+                    $imagen=$imagen['imagen'];
+                    $arreglonuevo=array(
+                    'Id' => $_GET['id'],
+                    'Nombre' => $nombre,
+                    'Precio' => $precio, 
+                    'Imagen' => $imagen,
+                    'Cantidad' => 1
+                );
+                    array_push($arreglo,$arreglonuevo);
+                    $_SESSION['carrito']=$arreglo;
+                }
+            }
         }else{
         if(isset($_GET['id'])){
          $resultado=$conexion->query('select * from productos where id='.$_GET['id'])or die($conexion->error); 
@@ -57,13 +86,15 @@
         <tr>
             <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $arreglo[$i]['Imagen']; ?>.jpg" alt="" width="60%" height="90%"></th>
             <th class="imagen" style="text-align: center; height: 150px;"><?php echo $arregloc[$i]['Nombre'] ?></th>
-            <th class="imagen" style="text-align: center; height: 150px;"><?php echo $arregloc[$i]['Precio'] ?></th>
+            <th class="imagen" style="text-align: center; height: 150px;">Mex$ <?php echo $arregloc[$i]['Precio'] ?></th>
             <th class="imagen" style="text-align: center; height: 150px;"><input type="text" value="<?php echo $arregloc[$i]['Cantidad'] ?>"></th>
+            <th class="imagen" style="text-align: center; height: 150px;">Subtotal: <? echo $arreglo[$i]['Precio']*$arreglo[$i]['Cantidad'] ?></th>
             <th class="botonf" style="text-align: center; height: 150px;"><input class="boton" type="submit" value="Eliminar del carrito"><img class="carrito" src="images/carrito.jpg" alt=""></th>
         </tr>
         <?php
         } }
-        ?>    
+        ?> 
+        
     </table>
         
     
