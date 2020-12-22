@@ -13,8 +13,9 @@ if(!$conexion){
 
  $sql = 'select * from carrito';
  if(isset($_SESSION['carrito'])){
-     
+     echo "Sesion ya iniciada;"
  }else{
+     echo "Creo una sesion";
      if(isset($_GET['id'])){
          $resultado=$conexion->query('select * from productos where id='.$_GET['id'])or die($conexion->error); 
          $nombre=$fila['producto'];
