@@ -46,7 +46,7 @@ $resultado = $conexion -> query($sql);
                 $tipo = $fila['tipo'];
                 if($tipo==2){
                 $imagen = $fila['imagen'];
-                $consola = $fila['consola'];
+                $consola = $fila['producto'];
                 $precio = $fila['precio'];
             ?>
             <tr>
