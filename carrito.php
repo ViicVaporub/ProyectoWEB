@@ -12,9 +12,6 @@ if(!$conexion){
 }
 
  $sql = 'select * from carrito';
-
- session_start();
- include 'conexion.php';
  if(isset($_SESSION['carrito'])){
      
  }else{
@@ -25,9 +22,9 @@ if(!$conexion){
          $imagen=$imagen['imagen'];
          $arreglo[]=array(
             'Id' => $_POST['id'],
-            'Nombre' => $nombre;
-            'Precio' => $precio; 
-            'Imagen' => $imagen;
+            'Nombre' => $nombre,
+            'Precio' => $precio, 
+            'Imagen' => $imagen,
             'Cantidad' => 1
          );
          $_SESSION['carrito']=$arreglo;
@@ -58,17 +55,17 @@ if(!$conexion){
     </header>
     <table style="width: 100%; margin-top: 10px; table-layout: fixed;">
        <?php 
-        if(isset($_SESSION['carrito']){
+        if(isset($_SESSION['carrito'])){
             $arregloc= $_SESSION['carrito'];
             for($i=0;$i<count($arregloc);$i++){
         ?>
         <tr>
-            <th class="imagen" style="text-align: center; height: 150px;">Img</th>
+            <th class="imagen" style="text-align: center; height: 150px;">Imagen</th>
             <th class="imagen" style="text-align: center; height: 150px;">Nombre</th>
             <th class="imagen" style="text-align: center; height: 150px;">Precio</th>
             <th class="imagen" style="text-align: center; height: 150px;">Cantidad</th>
             <th class="imagen" style="text-align: center; height: 150px;">Salir</th>
-            <th class="botonf" style="text-align: center; height: 150px;">4<input class="boton" type="submit" value="Eliminar del carrito"><img class="carrito" src="images/carrito.jpg" alt=""></th>
+            <th class="botonf" style="text-align: center; height: 150px;"><input class="boton" type="submit" value="Eliminar del carrito"><img class="carrito" src="images/carrito.jpg" alt=""></th>
         </tr>
         <?php
         } }
