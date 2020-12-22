@@ -56,7 +56,10 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                     <br>
-                   <form role="form" action="base.php" method="post" onsubmit="return comprobarclave();">
+                    <div id="msg"></div>
+                    <div id="error" class="alert alert-danger ocultar" role="alert">Las Contraseñas no coinciden</div>
+                    <div id="ok" class="alert alert-success ocultar" role="alert">Verificacion correcta</div>
+                   <form role="form" action="base.php" method="post" onsubmit="verificarPasswords(); return false">
                             <div class="modal-body">
                                 <label class="label" for="Nombre">Nombre:</label>
                                 <input type="text" name="Nombre" id="Nombre" class="registro" placeholder="Nombre" required> 
