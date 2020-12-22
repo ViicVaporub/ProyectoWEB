@@ -17,4 +17,5 @@ if(isset($arreglonuevo)){
 }else{
     unset($_SESSION['carrito']);
 }
+echo "listo";
 ?>
