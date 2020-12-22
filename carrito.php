@@ -1,39 +1,3 @@
-<?php  
-session_start();
-$servidor = "localhost"; 
-$nombreusuario = "root";
-$password = "";
-$bd = "u458624775_productos";
-
-$conexion =  mysqli_connect($servidor, $nombreusuario, $password, $bd);
-
-if(!$conexion){
-    die("Conexion fallida: " .  mysqli_connect_error());
-}
-
- $sql = 'select * from carrito';
- if(isset($_SESSION['carrito'])){
-     echo "Sesion ya iniciada;"
- }else{
-     echo "Creo una sesion";
-     if(isset($_GET['id'])){
-         $resultado=$conexion->query('select * from productos where id='.$_GET['id'])or die($conexion->error); 
-         $nombre=$fila['producto'];
-         $precio=$fila['precio'];
-         $imagen=$imagen['imagen'];
-         $arreglo[]=array(
-            'Id' => $_POST['id'],
-            'Nombre' => $nombre,
-            'Precio' => $precio, 
-            'Imagen' => $imagen,
-            'Cantidad' => 1
-         );
-         $_SESSION['carrito']=$arreglo;
-     }
- }
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,9 +13,46 @@ if(!$conexion){
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 <body>
+   <header>
+       <!-- Llamamos al encabezado por medio de include_once -->
+        <?php include_once('encabezado.php');?>
+    </header>
+    
+    
+    <?php  
+        $servidor = "localhost"; 
+        $nombreusuario = "root";
+        $password = "";
+        $bd = "u458624775_productos";
+
+        $conexion =  mysqli_connect($servidor, $nombreusuario, $password, $bd);
+
+        $id = $_GET['id'];
+        echo "$id";
+        $sql = 'select * from carrito';
+        if(isset($_SESSION['carrito'])){
+     
+        }else{
+            if(isset($_GET['id'])){
+                echo "lleno el arreglo";
+                $resultado=$conexion->query('select * from productos where id='.$_GET['id'])or die($conexion->error); 
+                $nombre=$fila['producto'];
+                $precio=$fila['precio'];
+                $imagen=$imagen['imagen'];
+                $arreglo[]=array(
+                'Id' => $_GET['id'],
+                'Nombre' => $nombre,
+                'Precio' => $precio, 
+                'Imagen' => $imagen,
+                'Cantidad' => 1
+                );
+                $_SESSION['carrito']=$arreglo;
+            }
+        }
+?>  
+    
     <table style="width: 100%; margin-top: 10px; table-layout: fixed;">
        <?php 
-        echo "si entro aqui 1";
         if(isset($_SESSION['carrito'])){
             echo "si entro aqui 2";
             $arregloc= $_SESSION['carrito'];
