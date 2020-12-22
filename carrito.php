@@ -45,9 +45,9 @@
                 }else{
                     $resultado=$conexion->query('select * from productos where id='.$_GET['id'])or die($conexion->error); 
                     $fila = mysqli_fetch_row($resultado); 
-                    $nombre=$fila['producto'];
-                    $precio=$fila['precio'];
-                    $imagen=$imagen['imagen'];
+                    $nombre=$fila[1];
+                    $precio=$fila[3];
+                    $imagen=$fila[2];
                     $arreglonuevo=array(
                     'Id' => $_GET['id'],
                     'Nombre' => $nombre,
@@ -63,9 +63,9 @@
         if(isset($_GET['id'])){
          $resultado=$conexion->query('select * from productos where id='.$_GET['id'])or die($conexion->error); 
          $fila = mysqli_fetch_row($resultado); 
-         $nombre=$fila['producto'];
-         $precio=$fila['precio'];
-         $imagen=$imagen['imagen'];
+         $nombre=$fila[1];
+         $precio=$fila[3];
+         $imagen=$fila[2];
          $arreglo[]=array(
             'Id' => $_GET['id'],
             'Nombre' => $nombre,
