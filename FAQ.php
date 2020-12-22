@@ -23,9 +23,9 @@
        <!-- Llamamos al encabezado por medio de include_once -->
         <?php include_once('encabezado.php');?>
     </header>
-    <h1>Preguntas Frecuentes (FAQ)</h1>
+    <h1 class="">Preguntas Frecuentes (FAQ)</h1>
    <br>
-   <h3 class="pregunta1">¿En que podemos Ayudarte?</h3>
+   <h3 class="pregunta1" >¿En que podemos Ayudarte?</h3>
     <div class="contenedor">
         <div class="lista">
             <div class="item">

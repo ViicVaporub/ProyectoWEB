@@ -30,7 +30,7 @@
         <h1 style="font-family: monospace;" class="form-group text-center">¡Bienvenido Administrador!</h1>
         <div class="form-group text-center">
            <form role="form" action="AltaProducto.php" method="post">
-            <ul class="wrapper form-group text-center" style="padding-left: 200px;">
+            <ul class="wrapper" style="padding-left: 200px;">
                 <li class="form-row">
                 <label for="id">ID</label>
                 <input type="number" name="id" id="id" required>
