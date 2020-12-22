@@ -1,39 +1,3 @@
-<?php  
-session_start();
-$servidor = "localhost"; 
-$nombreusuario = "root";
-$password = "";
-$bd = "u458624775_productos";
-
-$conexion =  mysqli_connect($servidor, $nombreusuario, $password, $bd);
-
-if(!$conexion){
-    die("Conexion fallida: " .  mysqli_connect_error());
-}
-
- $sql = 'select * from carrito';
- if(isset($_SESSION['carrito'])){
-     echo "Sesion ya iniciada";
- }else{
-     echo "Creo una sesion";
-     if(isset($_GET['id'])){
-         $resultado=$conexion->query('select * from productos where id='.$_GET['id'])or die($conexion->error); 
-         $nombre=$fila['producto'];
-         $precio=$fila['precio'];
-         $imagen=$imagen['imagen'];
-         $arreglo[]=array(
-            'Id' => $_GET['id'],
-            'Nombre' => $nombre,
-            'Precio' => $precio, 
-            'Imagen' => $imagen,
-            'Cantidad' => 1
-         );
-         $_SESSION['carrito']=$arreglo;
-     }
- }
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,7 +19,6 @@ if(!$conexion){
     </header>
    
    <?php  
-        session_start();
         $servidor = "localhost"; 
         $nombreusuario = "root";
         $password = "";
@@ -70,6 +33,7 @@ if(!$conexion){
         echo "Creo una sesion";
         if(isset($_GET['id'])){
          $resultado=$conexion->query('select * from productos where id='.$_GET['id'])or die($conexion->error); 
+         $fila = mysqli_fetch_row($resultado); 
          $nombre=$fila['producto'];
          $precio=$fila['precio'];
          $imagen=$imagen['imagen'];
