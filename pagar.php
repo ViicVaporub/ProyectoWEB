@@ -28,7 +28,7 @@
        <th>
         <h2 style="padding:20px;">Pago con tarjeta</h2> <br> 
         <img src="images/visamaster.png" style="height:10%; width:10%; margin-left:30px;" alt="">
-        <form role="form" action="DatosEnvio.php?=1" method="get">
+        <form role="form" action="DatosEnvio.php" method="post" onsubmit="verificarPasswords(); return false">
             <div class="modal-body">
             <label class="labe" for="NTarjeta">N° de Tarjeta:</label>
             <input type="text" name="NTarjeta" id="NTarjeta" class="registro" placeholder="NTarjeta" required> 
@@ -55,16 +55,15 @@
             <div class="form-group">
             <button class="boton" type="submit" class="btn btn-primary btn-block">Enviar</button>
             </div>
+           
         </form>
            </th>
-           <form role="form" action="DatosEnvio.php?=2" method="get">
-           <th style="margin-bottom:500px">
+            <th style="margin-bottom:500px">
             <h2 style="padding:20px;">Pago con oxxo</h2> <br> 
             <img src="images/oxxo.png" style="height:5%; width:5%; margin-left:30px;" alt="">
             <p style="padding:20px;font-size:20px;">Deposita en este numero de cuenta: 6594 6452 4564 4841 </p>
             <button class="boton" type="submit" class="btn btn-primary btn-block">Enviar</button>
             </th>
-            </form>
         </table>
    <footer>
        <!-- Llamamos al pie de pagina por medio de include_once -->
