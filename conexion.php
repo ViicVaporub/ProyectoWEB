@@ -13,4 +13,14 @@ if(!$conexion){
     die("Conexion fallida: " .  mysqli_connect_error());
 }
 
+function Conectarse(){
+    $link=mysqli_connect("localhost","u458624775_productos","Breack20");
+    if(!$link)
+      exit();
+    $con=mysqli_select_db("u458624775_productos", $link);
+    if(!$con)
+       exit();
+    return $link ;    
+}
+
 ?>   
