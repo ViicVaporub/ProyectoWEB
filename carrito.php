@@ -189,7 +189,7 @@
                 $total+=$arregloc[$i]['Precio']*$arregloc[$i]['Cantidad'];
         ?>
         <tr>
-            <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $arregloc[$i]['Imagen']; ?>" alt="" width="60%" height="90%"></th>
+            <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $arregloc[$i]['Imagen']; ?>.jpg" alt="" width="60%" height="90%"></th>
             <th class="imagen" style="text-align: center; height: 150px;">Nombre del producto: <?php echo $arregloc[$i]['Nombre'] ?></th>
             <th class="imagen" style="text-align: center; height: 150px;">Mex$ <?php echo $arregloc[$i]['Precio'] ?></th>
             <th class="imagen" style="text-align: center; height: 150px;">Cantidad: <?php echo $arregloc[$i]['Cantidad'] ?></th>
