@@ -24,20 +24,20 @@
        <!-- Llamamos al encabezado por medio de include_once -->
         <?php include_once('encabezado.php');?>
     </header>
-       
+           <div>
         <h2 style="padding:20px;">Datos de envio</h2> <br> 
         <form role="form" action="home.php" method="post" onsubmit="verificarPasswords(); return false">
             <label class="labe" for="NTarjeta">Usuario:</label>
             <input type="text" name="NTarjeta" id="NTarjeta" class="registro" placeholder="NTarjeta" required> 
             <br><br>
             <label class="labe" for="Caducidad">Direccion:</label>
-            <input type="text" name="Caducidad" id="Caducidad" class="registro" required> 
+            <input type="date" name="Caducidad" id="Caducidad" class="registro" required> 
             <br><br>
             <label class="labe" for="Codigos">Colonia:</label>
             <input type="text" name="Codigos" id="Codigos" class="registro" required> 
             <br><br>
             <label class="labe" for="Titular">Codigo Postal:</label>
-            <input type="text" name="Titular " id="Titular" class="registro" required> 
+            <input type="number" name="Titular " id="Titular" class="registro" required> 
             <br><br>
             <label class="labe" for="Titular">Añadir Cupon (Campo no requerido) :</label>
             <input type="text" name="Titular " id="Titular" class="registro"> 

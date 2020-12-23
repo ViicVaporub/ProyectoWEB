@@ -90,7 +90,7 @@
             <?php        
          //continuamos con la consulta de datos a la tabla usuarios
          //vemos datos en un tabla de html
-         $sql = 'select * from carrito';//hacemos cadena con la sentencia mysql que consulta todo el contenido de la tabla
+         $sql = 'select * from Carrito';//hacemos cadena con la sentencia mysql que consulta todo el contenido de la tabla
          $resultado = $conexion -> query($sql); //aplicamos sentencia
          
          if ($resultado -> num_rows){ //si la consulta genera registros
