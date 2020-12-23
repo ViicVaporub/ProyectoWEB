@@ -45,7 +45,7 @@
                     $arreglo[$numero]['Cantidad']=$arreglo[$numero]['Cantidad']+1;
                     $_SESSION['carrito']=$arreglo;
                 }else{
-                    $resultado=$conexion->query('select * from productos where id='.$_GET['id'])or die($conexion->error); 
+                    $resultado=$conexion->query('select * from Carrito where id='.$_GET['id'])or die($conexion->error); 
                     $fila = mysqli_fetch_row($resultado); 
                     $nombre=$fila[1];
                     $precio=$fila[3];
@@ -63,7 +63,7 @@
             }
         }else{
         if(isset($_GET['id'])){
-         $resultado=$conexion->query('select * from productos where id='.$_GET['id'])or die($conexion->error); 
+         $resultado=$conexion->query('select * from Carrito where id='.$_GET['id'])or die($conexion->error); 
          $fila = mysqli_fetch_row($resultado); 
          $nombre=$fila[1];
          $precio=$fila[3];

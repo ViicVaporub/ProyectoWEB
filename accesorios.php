@@ -1,17 +1,13 @@
 <?php 
 
 $servidor = "localhost"; 
-$nombreusuario = "u458624775_productos";
-$password = "Breack20";
+$nombreusuario = "root";
+$password = "";
 $bd = "u458624775_productos";
 
 $conexion =  mysqli_connect($servidor, $nombreusuario, $password, $bd);
 
-if(!$conexion){
-    die("Conexion fallida: " .  mysqli_connect_error());
-}
-
-$sql = 'select * from carrito';
+$sql = 'select * from Carrito';
 $resultado = $conexion -> query($sql);
 
 ?>
@@ -29,7 +25,7 @@ $resultado = $conexion -> query($sql);
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-        <!-- Favicon -->
+  <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/gigi.png">
     
 </head>
@@ -41,25 +37,24 @@ $resultado = $conexion -> query($sql);
     </header>
     
     <div>
+      
        <img src="images/Anuncio.jpg"  style="width:100%; height: 200px;" alt="">
-        <table class="tablita">
+        <table style="width: 100%; margin-top: 10px; table-layout: fixed;">
            <?php
-            while($fila = $resultado -> fetch_assoc()){
+             while($fila = $resultado -> fetch_assoc()){
                 $tipo = $fila['tipo'];
                 if($tipo==3){
+                    
                 $imagen = $fila['imagen'];
-                $accesorio = $fila['producto'];
+                $nombre = $fila['producto'];
                 $precio = $fila['precio'];
                 $id = $fila['id'];
             ?>
             <tr>
-
-                <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $imagen; ?>.jpg" alt="" width="60%" height="90%"></th>
-                <th class="nombre" style="text-align: center; height: 150px;"> <?php echo $accesorio ?></th>
+                <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $imagen; ?>.jpg" alt=" " width="60%" height="90%"></th>
+                <th class="nombre" style="text-align: center; height: 150px;"> <?php echo $nombre ?></th>
                 <th class="precio" style="text-align: center; height: 150px;"> Mex$ <?php echo $precio ?> </th>
-                
-               
-                <th class="botonf" style="text-align: center; height: 150px;"><input class="boton" type="submit" value="Añadir al carrito"><img class="carrito" src="images/carrito.jpg" alt=""></th>
+                <th><a href="carrito.php?id=<?php echo $id ?>" >Añadir al carrito</a></th>
             </tr>
             <?php
             }}
