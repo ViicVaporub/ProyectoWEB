@@ -193,16 +193,18 @@
             <th class="imagen" style="text-align: center; height: 150px;">Nombre del producto: <?php echo $arregloc[$i]['Nombre'] ?></th>
             <th class="imagen" style="text-align: center; height: 150px;">Mex$ <?php echo $arregloc[$i]['Precio'] ?></th>
             <th class="imagen" style="text-align: center; height: 150px;">Cantidad: <?php echo $arregloc[$i]['Cantidad'] ?></th>
-            <th class="imagen" style="text-align: center; height: 150px;">Subtotal: <?php echo $arregloc[$i]['Precio']*$arregloc[$i]['Cantidad'] ?></th>
+            <th class="imagen" style="text-align: center; height: 150px;">Subtotal: Mex$ <?php echo $arregloc[$i]['Precio']*$arregloc[$i]['Cantidad'] ?></th>
             <th><a href="eliminarc.php?id=<?php echo $arregloc[$i]['Id'] ?>" class=" btnEliminar" id="<?php echo $arregloc[$i]['Id'] ?>">X</a></th>
         </tr>
         <?php
         } }
         ?> 
-        <th style="background-color:#343a40; width:100%; height:30%; color:white">Total estimado <?php echo $total ?></th> 
     </table>
     <form action="pagar.php">
-        <input style="color:white;border:1px solid black; padding:10px; background-color:#343a40;" type="submit" value="Realizar pago"><br>
+        <table style="width:100%;table-layout: fixed;background-color:#343a40; height:60px">
+            <th><p style="background-color:#343a40;  padding:30px; color:white">Total estimado Mex$ <?php echo $total ?></p></th>
+            <th><input style="width:100%;height:100%; color:white; padding:30px; background-color:#343a40;" type="submit" value="Realizar pago"><br></th>
+        </table>  
     </form> 
     
     

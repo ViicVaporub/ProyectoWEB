@@ -24,46 +24,30 @@
        <!-- Llamamos al encabezado por medio de include_once -->
         <?php include_once('encabezado.php');?>
     </header>
-       <table style="width:100%">
-       <th>
-        <h2 style="padding:20px;">Pago con tarjeta</h2> <br> 
-        <img src="images/visamaster.png" style="height:10%; width:10%; margin-left:30px;" alt="">
-        <form role="form" action="DatosEnvio.php" method="post" onsubmit="verificarPasswords(); return false">
+       
+        <h2 style="padding:20px;">Datos de envio</h2> <br> 
+        <form role="form" action="Notacompra.php" method="post" onsubmit="verificarPasswords(); return false">
             <div class="modal-body">
-            <label class="labe" for="NTarjeta">N° de Tarjeta:</label>
+            <label class="labe" for="NTarjeta">Usuario:</label>
             <input type="text" name="NTarjeta" id="NTarjeta" class="registro" placeholder="NTarjeta" required> 
             <br><br>
-            <label class="labe" for="Caducidad">Caducidad:</label>
+            <label class="labe" for="Caducidad">Direccion:</label>
             <input type="text" name="Caducidad" id="Caducidad" class="registro" required> 
             <br><br>
-            <label class="labe" for="Codigos">Codigo de seguridad:</label>
+            <label class="labe" for="Codigos">Colonia:</label>
             <input type="text" name="Codigos" id="Codigos" class="registro" required> 
             <br><br>
-            <label class="labe" for="Titular">Titular de la tarjeta:</label>
+            <label class="labe" for="Titular">Codigo Postal:</label>
             <input type="text" name="Titular " id="Titular" class="registro" required> 
             <br><br>
-            <label class="labe" for="Direccion">Direccion:</label>
-            <input type="text" name="Direccion" id="Direccion" class="registro" required> 
-            <br><br>
-            <label class="labe" for="Ciudad">Ciudad:</label>
-            <input type="text" name="Ciudad " id="Ciudad" class="registro" required> 
-            <br><br>
-            <label class="labe" for="CodigoP">Codigo Postal:</label>
-            <input type="text" name="CodigoP " id="CodigoP" class="registro" required> 
+            <label class="labe" for="Titular">Añadir Cupon (Campo no requerido) :</label>
+            <input type="text" name="Titular " id="Titular" class="registro"> 
             <br><br>
             </div>
             <div class="form-group">
             <button class="boton" type="submit" class="btn btn-primary btn-block">Enviar</button>
             </div>
         </form>
-           </th>
-           <th style="margin-botom:500px;">
-            <h2 style="padding:20px;">Pago con oxxo</h2> <br> 
-            <img src="images/oxxo.png" style="height:5%; width:5%; margin-left:30px;" alt="">
-            <p style="padding:20px;font-size:20px;">Deposita en este numero de cuenta: 6594 6452 4564 4841 </p>
-            <button class="boton" type="submit" class="btn btn-primary btn-block">Enviar</button>
-            </th>
-        </table>
    <footer>
        <!-- Llamamos al pie de pagina por medio de include_once -->
         <?php include_once('footer.php');?>
