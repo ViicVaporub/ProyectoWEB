@@ -24,10 +24,10 @@
    
    <?php
     
-    $servidor='localhost';
-    $cuenta='root';
-    $password='';
-    $bd='u458624775_productos';
+    $servidor = "localhost"; 
+ $nombreusuario = "u458624775_productos";
+ $password = "Breack20";
+ $bd = "u458624775_productos";
 
     $_SESSION["id"] = "";
     $_SESSION["Nombre"] = "";
@@ -37,7 +37,7 @@
 
    
     //conexion a la base de datos
-    $conexion = new mysqli($servidor,$cuenta,$password,$bd);
+    $conexion =  mysqli_connect($servidor, $nombreusuario, $password, $bd);
 
     if ($conexion->connect_errno){
          die('Error en la conexion');
