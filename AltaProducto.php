@@ -1,9 +1,9 @@
 <?php
  
- $servidor = "localhost"; 
- $nombreusuario = "root";
- $password = "";
- $bd = "u458624775_productos";
+        $servidor = "localhost"; 
+        $nombreusuario = "u458624775_productos";
+        $password = "Breack20";
+        $bd = "u458624775_productos";
  
  $conexion =  mysqli_connect($servidor, $nombreusuario, $password, $bd);
  
@@ -21,7 +21,7 @@
  
 
 
-    $sql = "INSERT INTO carrito(id, producto, imagen, precio, existencias, tipo) VALUES ('$id', '$producto', '$imagen', '$precio','$existencias','$tipo')";
+    $sql = "INSERT INTO Carrito(id, producto, imagen, precio, existencias, tipo) VALUES ('$id', '$producto', '$imagen', '$precio','$existencias','$tipo')";
     
     if(mysqli_query($conexion,$sql) === true){
         echo "Se creo la tabla correctamente";
