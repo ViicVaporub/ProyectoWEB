@@ -1,10 +1,3 @@
-<?php
-session_start();
-
-$correo = $_SESSION['correo'];
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +9,8 @@ $correo = $_SESSION['correo'];
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Gisci</title>
     <link rel="stylesheet" href="css/estilo.css"> 
-    <link rel="stylesheet" href="css/estilo_registro.css">      
+    <link rel="stylesheet" href="css/estilo_registro.css"> 
+    <link rel="stylesheet" href="css/modificar.css">     
     <!-- Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Google fonts -->
@@ -30,28 +24,51 @@ $correo = $_SESSION['correo'];
        <!-- Llamamos al encabezado por medio de include_once -->
         <?php include_once('encabezado.php');?>
 </header>
-<img src="images/recuperarv2.jpg"  style="width:100%; height:500px" alt="">
-        <br><br>
-        <h1 style="font-family: monospace;" class="form-group text-center">Recupera Tu Contraseña</h1>
-        <div class="form-group text-center">
-        
-        <div id="msg"></div>
-            <div id="error" class="alert alert-danger ocultar" role="alert">Las Contraseñas no coinciden</div>
-            <div id="ok" class="alert alert-success ocultar" role="alert">Verificacion correcta</div>
-            <form  action="renovarcontra.php" method="post" onsubmit="verificarPasswords(); return false">
 
-                <input  style="border-top:none;border-left:none;border-right:none;border-bottom-color:black;color:black; background-color:#b7b7b7; width:300px; height:30%; padding:10px;" name="Contraseña" id="contra1" placeholder="Contraseña nueva" type="password" required>
-                <!-- <input name="usuario" type="text" placeholder="Escribe tu nombre de usuario"> -->
-                <br><br>
-                <input  style="border-top:none;border-left:none;border-right:none;border-bottom-color:black;color:black; background-color:#b7b7b7; width:300px; height:30%; padding:10px;" name="contra " id="contra2" placeholder="Verificar Contraseña" type="password" required>
-                <br><br>
-                <hr>
-                <input type="submit" value="Renovar Contraseña"><br>
-            </form>
-                <div class="form-group text-center">
-                <hr>
+     <img src="images/banneradmin.jpg"  style="width:100%;" alt="">
+        <br><br>
+        <h1 style="font-family: monospace;" class="form-group text-center">¡Bienvenido Administrador!</h1>
+        <div class="form-group text-center">
+           <form role="form" action="AltaProducto.php" method="post">
+            <ul class="wrapper" style="padding-left: 200px;">
+                <li class="form-row">
+                <label for="id">ID</label>
+                <input type="number" name="id" id="id" required>
+                </li>
+                <li class="form-row">
+                <label for="producto">PRODUCTO</label>
+                <input type="text" id="producto" name="producto" required>
+                </li>
+                <li class="form-row">
+                <label for="imagen">IMAGEN</label>
+                <input type="text" id="imagen" name="imagen" required>
+                </li>
+                <li class="form-row">
+                <label for="precio">PRECIO</label>
+                <input type="number" id="precio" name="precio" required>
+                </li>
+                <li class="form-row">
+                <label for="existencias">EXISTENCIAS</label>
+                <input type="number" id="existencias" name="existencias" required>
+                </li>
+                <li class="form-row">
+                <label for="tipo">TIPO</label>
+                <input type="text" id="tipo" name="tipo" required>
+                </li>
+                <li class="form-row">
+                <button type="submit" name="mod">Subir</button>
+                </li>
+            </ul>
+       </form>
             
-                <footer>
+
+            
+          
+        <br><br>
+    </div><br><br>
+
+
+<footer>
        <!-- Llamamos al pie de pagina por medio de include_once -->
         <?php include_once('footer.php');?>
 </footer>
@@ -61,4 +78,4 @@ $correo = $_SESSION['correo'];
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="js/comprobarclave.js"></script>
 </body>
-</html> 
+</html>

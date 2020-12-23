@@ -13,15 +13,8 @@
     echo "Conexion exitosa";
 
     $id = $_POST["id"];
-    $producto = $_POST["producto"];
-    $imagen = $_POST["imagen"];
-    $precio = $_POST["precio"];
-    $existencias = $_POST["existencias"];
-    $tipo = $_POST["tipo"];
- 
 
-
-    $sql = "INSERT INTO carrito(id, producto, imagen, precio, existencias, tipo) VALUES ('$id', '$producto', '$imagen', '$precio','$existencias','$tipo')";
+    $sql = "DELETE FROM Carrito WHERE id = '$id'";
     
     if(mysqli_query($conexion,$sql) === true){
         echo "Se creo la tabla correctamente";

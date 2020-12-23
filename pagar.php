@@ -1,16 +1,3 @@
-<?php 
-
-$servidor = "localhost"; 
-$nombreusuario = "root";
-$password = "";
-$bd = "u458624775_productos";
-
-$conexion =  mysqli_connect($servidor, $nombreusuario, $password, $bd);
-
-$sql = 'select * from Carrito';
-$resultado = $conexion -> query($sql);
-
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -19,46 +6,48 @@ $resultado = $conexion -> query($sql);
     <script src="https://kit.fontawesome.com/f5316de33f.js" crossorigin="anonymous"></script>
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Catalogo Gisci</title>
-    <link rel="stylesheet" href="css/estilo_tienda.css">     
+    <title>Gisci</title>
+    <link rel="stylesheet" href="css/estilo.css">    
     <!-- Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/gigi.png">
+
+    
 </head>
-<body class="fondo">
+<body>
    
    <header>
        <!-- Llamamos al encabezado por medio de include_once -->
         <?php include_once('encabezado.php');?>
     </header>
-    
-    <div>
-       <img src="images/Anuncio.jpg"  style="width:100%; height: 200px;" alt="">
-        <table class="tablita">
-           <?php
-            while($fila = $resultado -> fetch_assoc()){
-                $tipo = $fila['tipo'];
-                if($tipo==2){
-                $imagen = $fila['imagen'];
-                $consola = $fila['producto'];
-                $precio = $fila['precio'];
-                $id = $fila['id'];
-            ?>
-            <tr>
-                <th class="imagen" style="text-align: center; height: 150px;"><img class="imgenhover" src="images/productos/<?php echo $imagen; ?>.jpg" alt="" width="60%" height="90%"></th>
-                <th class="nombre" style="text-align: center; height: 150px;"> <?php echo $consola ?></th>
-                <th class="precio" style="text-align: center; height: 150px;"> Mex$ <?php echo $precio ?> </th>
-                <th><a href="carrito.php?id=<?php echo $id ?>" >Añadir al carrito</a></th>
-            </tr>
-            <?php
-            }}
-            ?>    
-        </table>
-    </div>
-              
+    <form action="/action_page.php" style="text-align:center; background='visa.png';">
+
+  <h1>Pago con tarjeta de credito</h1>
+<a href=""><img src="images/visa.png" alt="" height="100px"></a>
+ <a href=""><img src="images/mastercard.png" alt="" height="100px"></a>
+  <h3>Datos de pago con tarjeta de credito</h3>
+      Nº de Tarjeta 
+  <input type="text" style="background-color: gray;" name="ndetarjeta"> <br> <br>
+  Caducidad:
+  	<input type="date">
+  	<br><br>    
+  	Codigo de seguridad:
+  	<input type="text" style="background-color: gray;" name="codigo"> <br> <br>
+  	Titular de la tarjeta:
+  	<input type="text" style="background-color: gray;" name="titular"> <br> <br>
+  	Direccion:
+  	<input type="text" style="background-color: gray;" name="dir"> <br> <br>
+  	Ciudad:
+  	<input type="text" style="background-color: gray;" name="ciudad"> <br> <br>
+  	Codigo Postal: 
+  	<input type="text" style="background-color: gray;" name="nombredelacaja"> <br> <br>
+       <input type="button" value="Pagar" onclick="location.href="/> <br> <br>
+        <h2>Si quieres pagar en Oxxo</h2> <br> 
+        Deposita en este numero de cuenta: 6594 6452 4564 4841 
+</form> 
    <footer>
        <!-- Llamamos al pie de pagina por medio de include_once -->
         <?php include_once('footer.php');?>

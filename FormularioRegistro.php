@@ -39,7 +39,7 @@
                 <input type="hidden" name="array" value='<?php echo serialize($cuentas); ?>'>
                 <br><br>
                 <hr>
-                <input type="submit" value="Iniciar sesión"><br>
+                <input style="color:white;border:1px solid black; padding:10px; background-color:#343a40;" type="submit" value="Iniciar sesión"><br>
                 <div class="form-group text-center">
                 <hr>
                 <a href="Formulariorecuperar.php">
