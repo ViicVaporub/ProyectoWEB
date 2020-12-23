@@ -23,6 +23,7 @@
    <header>
        <!-- Llamamos al encabezado por medio de include_once -->
         <?php include_once('encabezado.php');?>
+        <?php $tipo=$_GET['id'] ?>
     </header>
         <h2 style="padding:20px;">Datos de envio</h2> <br> 
         <form role="form" action="home.php" method="post" onsubmit="verificarPasswords(); return false">
@@ -41,7 +42,7 @@
             <label class="labe" for="Codigos">Total + 16% de impuestos: <?php echo $total*1.16 ?></label>
  
             <br><br>
-            <label class="labe" for="Titular">Metodo de pago: </label>
+            <label class="labe" for="Titular">Metodo de pago: <?php if($tipo==1){echo "Tarjeta"}else{ echo "Oxxo" }  ?></label>
             <br><br>
             <label class="labe" for="Titular">Descuento: </label>
             <br><br>

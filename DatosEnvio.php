@@ -24,9 +24,9 @@
        <!-- Llamamos al encabezado por medio de include_once -->
         <?php include_once('encabezado.php');?>
     </header>
-       
+        <?php $tipo=$_GET['id']; ?>
         <h2 style="padding:20px;">Datos de envio</h2> <br> 
-        <form role="form" action="Notacompra.php" method="post" onsubmit="verificarPasswords(); return false">
+        <form role="form" action="Notacompra.php?=<?php echo $tipo ?>" method="get" >
             <div class="modal-body">
             <label class="labe" for="NTarjeta">Usuario:</label>
             <input type="text" name="NTarjeta" id="NTarjeta" class="registro" placeholder="NTarjeta" required> 
