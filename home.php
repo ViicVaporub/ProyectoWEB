@@ -20,9 +20,10 @@
 <body>
    
    <header>
-       <!-- Llamamos al encabezado por medio de include_once -->
+       
         <?php include_once('encabezado.php');?>
     </header>
+    
     
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -64,7 +65,7 @@
           </a>
     </div>
     
-   
+    <?php include_once('oferta.php');?>
    
    <footer>
        <!-- Llamamos al pie de pagina por medio de include_once -->
