@@ -55,9 +55,10 @@
             <div class="form-group">
             <button class="boton" type="submit" class="btn btn-primary btn-block">Enviar</button>
             </div>
+           
         </form>
            </th>
-           <th style="margin-bottom:500px">
+            <th style="margin-bottom:500px">
             <h2 style="padding:20px;">Pago con oxxo</h2> <br> 
             <img src="images/oxxo.png" style="height:5%; width:5%; margin-left:30px;" alt="">
             <p style="padding:20px;font-size:20px;">Deposita en este numero de cuenta: 6594 6452 4564 4841 </p>

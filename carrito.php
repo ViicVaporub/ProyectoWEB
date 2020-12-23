@@ -75,7 +75,7 @@
             'Imagen' => $imagen,
             'Cantidad' => 1
          );
-         $_SESSION['carrito']=$arreglo;
+         $_SESSION['carrito']=$arreglo; 
      }
  }
 ?>

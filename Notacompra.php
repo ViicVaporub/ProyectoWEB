@@ -23,26 +23,31 @@
    <header>
        <!-- Llamamos al encabezado por medio de include_once -->
         <?php include_once('encabezado.php');?>
+        <?php $tipo=$_GET['id'] ?>
     </header>
-           <div>
         <h2 style="padding:20px;">Datos de envio</h2> <br> 
         <form role="form" action="home.php" method="post" onsubmit="verificarPasswords(); return false">
-            <label class="labe" for="NTarjeta">Usuario:</label>
-            <input type="text" name="NTarjeta" id="NTarjeta" class="registro" placeholder="NTarjeta" required> 
+            <?php if(isset($_SESSION['carrito'])){
+            $total;
+            $arregloc= $_SESSION['carrito'];
+            for($i=0;$i<count($arregloc);$i++){
+                ?><label class="labe" for="Caducidad">Producto: <?php echo $arregloc[$i]['Nombre'] ?> Precio <?php echo $arregloc[$i]['Precio'] ?></label>
+                <?php $total+=$arregloc[$i]['Precio']*$arregloc[$i]['Cantidad']; 
+            }
+            ?>
             <br><br>
-            <label class="labe" for="Caducidad">Direccion:</label>
-            <input type="date" name="Caducidad" id="Caducidad" class="registro" required> 
+            <label class="labe" for="Caducidad">Total: <?php echo $total ?></label>
+
             <br><br>
-            <label class="labe" for="Codigos">Colonia:</label>
-            <input type="text" name="Codigos" id="Codigos" class="registro" required> 
+            <label class="labe" for="Codigos">Total + 16% de impuestos: <?php echo $total*1.16 ?></label>
+ 
             <br><br>
-            <label class="labe" for="Titular">Codigo Postal:</label>
-            <input type="number" name="Titular " id="Titular" class="registro" required> 
+            <label class="labe" for="Titular">Metodo de pago: <?php if($tipo==1){echo "Tarjeta"}else{ echo "Oxxo" }  ?></label>
             <br><br>
-            <label class="labe" for="Titular">Añadir Cupon (Campo no requerido) :</label>
-            <input type="text" name="Titular " id="Titular" class="registro"> 
+            <label class="labe" for="Titular">Descuento: </label>
             <br><br>
-            </div>
+            <label class="labe" for="Titular">Total: <?php echo $total*1.16 ?></label>
+            <br><br>
             <div class="form-group">
             <button class="boton" type="submit" class="btn btn-primary btn-block">SALIR</button>
             </div>
